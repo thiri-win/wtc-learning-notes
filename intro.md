@@ -46,7 +46,7 @@ What is a web server and how does it work?
 
 A server is a computer that runs applications and services ranging from websites to instant messaging. It's called a server because it provides a service to another computer and its user also known as the client. Is typically stored in something called a data center with hundreds or thousands of other servers, all running different services connected to the internet. A web server is software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web. The main job of a web server is to display website content through storing, processing and delivering webpages to users.
 
-![](../images/pic-1.png)
+![](images/pic-1.png)
 
 What are websites and webpages?
 ===============================
@@ -141,25 +141,12 @@ HTTP
 
 Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a stateless protocol, meaning that the server does not keep any data (state) between two requests.
 
-HTTP Methods
-
-Description
-
-GET
-
-The client requests a resource on the web server
-
-POST
-
-The client submits data to a resource on the web server
-
-PUT
-
-The client replaces a resource on the web server
-
-DELETE
-
-The client deletes a resource on the web server
+|HTTP Methods|Description|
+|------------|-----------|
+|GET|The client requests a resource on the web server|
+|POST|The client submits data to a resource on the web server|
+|PUT|The client replaces a resource on the web server|
+|DELETE|The client deletes a resource on the web server|
 
 Frameworks and Libraries
 ========================

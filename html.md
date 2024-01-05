@@ -1,7 +1,5 @@
 - [What is Hyper Text Markup Language?](#what-is-hyper-text-markup-language)
 - [HTML Basic](#html-basic)
-- [HTML - Formatting elements](#html---formatting-elements)
-- [HTML - Phrase tag](#html---phrase-tag)
 - [HTML - Heading](#html---heading)
 - [HTML - Paragraph](#html---paragraph)
 - [HTML - Tags](#html---tags)
@@ -30,7 +28,6 @@ What is Hyper Text Markup Language?
 ===================================
 
 HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/ presentation (CSS) or functionality/ behavior (JavaScript). "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
-
 ![](images/html.png)
 
 HTML Basic
@@ -40,56 +37,6 @@ HTML Basic
 *   `<head>` : The head tag comes next which contains all the header information of the web page or documents like the title of the page and other miscellaneous information. This information is enclosed within the head tag which opens with `<head>` and ends with `</head>`. The contents will of this tag will be explained in the later sections of the course.
 *   `<title>` : We can mention the title of a web page using the `<title>` tag. This is header information and hence is mentioned within the header tags. The tag begins with `<title>` and ends with `</title>`.
 *   `<body>` : Next step is the most important of all the tags we have learned so far. The body tag contains the actual body of the page which will be visible to all the users. This opens with `<body>` and ends with `</body>`. All content enclosed within this tag will be shown on the web page be it writings or images or audio or videos or even links. We will see later in the section how using various tags we may insert mentioned contents into our web pages.
-
-HTML - Formatting elements
-==========================
-
-Formatting elements were designed to display special types of text:
-
-`<b>` **Bold text**
-
-`<strong>` **Important text**
-
-`<i>` _Italic text_
-
-`<em>` _Emphasized text_
-
-`<mark>` <mark>Marked text</mark>
-
-`<small>` <small>Smaller text</small>
-
-`<del>` ~~Deleted text~~
-
-`<ins>` <ins>Inserted text</ins>
-
-`<sub>`This is <sub>subscript</sub> text
-
-`<sup>` This is <sup>superscript</sup> text
-
-HTML - Phrase tag
-=================
-
-The HTML phrase tags are special purpose tags, which defines the structural meaning of a block of text or semantics of text. Following is the list of phrase tags:
-
-`<abbr>` <abbr>Abbreviation tag</abbr>
-
-`<mark>` <mark>Marked tag</mark>
-
-`<strong>` **Strong tag**
-
-`<em>` _Emphasized tag_
-
-`<dfn>` <dfn>Definition tag</dfn>
-
-`<blockquote>` > Quoting tag
-
-`<q>` <q>Short quote tag</q>
-
-`<code>` `Code tag`
-
-`<kbd>` <kbd>Keyboard tag</kbd>
-
-`<address>`<address>Address tag</address>
 
 HTML - Heading
 ==============
@@ -110,9 +57,7 @@ HTML - Paragraph
 HTML paragraph or HTML `p` tag is used to define a paragraph in a webpage. Let's take a simple example to see how it work. It is a notable point that a browser itself add an empty line before and after a paragraph. An HTML `<p>` tag indicates starting of new paragraph.
 
 `<p>This is the first paragph.</p>` 
-
 `<p>This is the second paragph.</p>` 
-
 `<p>This is the third paragph.</p>`
 
 HTML - Tags
@@ -122,11 +67,24 @@ HTML tags are like keywords which defines that how web browser will format and d
 
 |syntax|description|
 |------|-----------|
-|`<h3>Heading Tag</h3>`|<h3>Heading Tag</h3>|
-|`<p>Paragraph Tag</p>`|Paragraph Tag|
-|`<b>Bold Tag </b>`|**Bold Tag**|
-|`<i>Italic Tag </i>`|_Italic Tag_|
-|`<u>Underline Tag</u>`|<ins>Underline Tag</ins>|
+|`<b>bold tag </b>`|**bold tag**|
+|`<strong>strong tag</strong>`|**strong tag**|
+|`<i>italic tag </i>`|_italic tag_|
+|`<em>emphasized tag</em>`|_emphasized tag_|
+|`<u>underline tag</u>`|<ins>underline tag</ins>|
+|`<mark>marked text</mark>`|<mark>marked text</mark>|
+|`<small>smaller text</small>`|<small>smaller text</small>|
+|`<del>deleted text</del>`|~~deleted text~~|
+|`<ins>inserted text</ins>`|<ins>inserted text</ins>|
+|`<sub>subscript</sub> text`|This is <sub>subscript</sub> text|
+|`<sup>superscript</sup> text`|This is <sup>superscript</sup> text|
+|`<abbr>abbreviation tag</abbr>`|<abbr>abbreviation tag</abbr>|
+|`<dfn>definition tag</dfn>`|<dfn>definition tag</dfn>|
+|`<blockquote>quoting tag</blockquote>`|> quoting tag|
+|`<q>short quote tag</q>`|<q>short quote tag</q>|
+|`<code>code tag</code>`|`code tag`|
+|`<kbd>keyboard tag</kbd>`|<kbd>keyboard tag</kbd>|
+|`<address>address tag</address>`|<address>address tag</address>|
 
 HTML - Text Links
 =================
@@ -173,11 +131,6 @@ Unordered List
     <li>list 5<li>                                     
 </ul>
 ```
-* list 1
-* list 2
-* list 3
-* list 4
-* list 5
                             
 Ordered List
 ------------
@@ -190,11 +143,6 @@ Ordered List
     <li>list 5<li>                                     
 </ol>
 ```
-1. list 1
-2. list 2
-3. list 3
-4. list 4
-5. list 5
 
 HTML - Media
 ============
@@ -265,29 +213,14 @@ HTML - Forms
 ============
 
 The HTML form element is used to create HTML Form
-
 `<form></form>`
 
-action
-
-`action(<form action=”login.php”></form>)`
-
-target
-
-`_blank(<form action=”login.php” target=”_blank”></form>)`  
-`_blank(<form action=”login.php” target=”_self”></form>)`    
-`_blank(<form action=”login.php” target=”_parent”></form>)`  
-`_blank(<form action=”login¬¬.php” target=”_top”></form>)`  
-
-method
-
-`<form action=”login.php” method=”get”></form>`  
-`<form action=”login.php” method=”post”></form>   `
-
-autocomplete
-
-`<form action=”login.php” autocomplete=”on”></form>`  
-`<form action=”login.php” autocomplete=”off”></form>`
+|attribute|description|
+|---|---|
+|action|`action(<form action=”login.php”></form>)`|
+|target|`_blank(<form action=”login.php” target=”_blank”></form>)`<br>`_blank(<form action=”login.php” target=”_self”></form>)`<br>`_blank(<form action=”login.php” target=”_parent”></form>)`<br>`_blank(<form action=”login¬¬.php” target=”_top”></form>)`|
+|method|`<form action=”login.php” method=”get”></form>`<br>`<form action=”login.php” method=”post”></form>`|
+|autocomplete|`<form action=”login.php” autocomplete=”on”></form>`<br>`<form action=”login.php” autocomplete=”off”></form>`|
 
 The HTML `<form>` element can have one or more following elements:
 
@@ -301,29 +234,29 @@ The HTML `<form>` element can have one or more following elements:
 *   `<legend>`
 *   `<output>`
 *   `<datalist>`
-    ```html
-    <input list="languages" name="lang">                                             
-    <datalist id="languages">                                                 
-        <option value="Javascript"></option>                                                 
-        <option value="PHP"></option>                                                 
-        <option value="Python"></option>                                                 
-        <option value="Java"></option>                                                 
-        <option value="C#"></option>                                             
-    </datalist>
-    ```
+```html
+<input list="languages" name="lang">                                             
+<datalist id="languages">                                                 
+    <option value="Javascript"></option>                                                 
+    <option value="PHP"></option>                                                 
+    <option value="Python"></option>                                                 
+    <option value="Java"></option>                                                 
+    <option value="C#"></option>                                             
+</datalist>
+```
 *   `<optgroup>`
-    ```html
-    <select name="type">                                                 
-        <optgroup label="Backend Developer">                                                     
-            <option value="php">PHP Developer</option>                         
-            <option value="laravel">Laravel Developer</option>                     
-        </optgroup>
-        <optgroup label="Frontend Developer">                        
-            <option value="react">React Developer</option>                         
-            <option value="vue">Vue Developer</option>                     
-        </optgroup>
-    </select>
-    ```
+```html
+<select name="type">                                                 
+    <optgroup label="Backend Developer">                                                     
+        <option value="php">PHP Developer</option>                         
+        <option value="laravel">Laravel Developer</option>                     
+    </optgroup>
+    <optgroup label="Frontend Developer">                        
+        <option value="react">React Developer</option>                         
+        <option value="vue">Vue Developer</option>                     
+    </optgroup>
+</select>
+```
     
 Forms - Input Elements
 ----------------------
@@ -354,101 +287,23 @@ Forms - Input Elements
 Forms - Input Elements Attribute
 --------------------------------
 
-value
-
-*   `<input type="text" value="John">`  
-*   specifies an initial value for an input field
-
-readonly
-
-*   `<input type="text" value="John" readonly>`  
-*   specifies that an input field is read-only.
-
-disabled
-
-*   `<input type="text" value="John" disabled>`  
-*   specifies that an input field should be disabled.
-
-size
-
-*   `<input type="text" name="firstname" size="20">`  
-*   specifies the visible width, in characters, of an input field.
-*   The default value for size is 20
-
-maxlength
-
-*   `<input type="text" name="firstname" maxlength="5">`  
-*   specifies the maximum number of characters allowed in an input field.
-
-min
-
-*   `<input type="date" name="dob" min="1980-11-31">`  
-*   specify the minimum values for an input field.
-*   min attributes work with the following input types: number, range, date, datetime-local, month, time and week.
-
-max
-
-*   `<input type="date" name="dob" max="2023-04-01">`  
-*   specify the maximum values for an input field.
-*   max attributes work with the following input types: number, range, date, datetime-local, month, time and week.
-
-multiple
-
-*   `<input type="files" name="photos" multiple>`  
-*   specifies that the user is allowed to enter more than one value in an input field.
-*   attribute works with the following input types: email, and file.
-
-pattern
-
-*   `<input type="text" name="code" pattern="\[A-Za-z\]{3}">`  
-*   The input pattern attribute specifies a regular expression that the input field's value is checked against, when the form is submitted.
-*   The pattern attribute works with the following input types: text, date, search, url, tel, email, and password. 
-
-placeholder 
-
-*   `<input type="text" name="firstname" placeholder="Enter Your First Name Here...">`  
-*   The short hint is displayed in the input field before the user enters a value.
-*   The placeholder attribute works with the following input types: text, search, url, tel, email, and password.
-
-required
-
-*   `<input type="text" name="firstname" required>`  
-*   The input required attribute specifies that an input field must be filled out before submitting the form.
-*   The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
-
-step
-
-*   `<input type="number" id="points" name="points" step="3">`  
-*   The input step attribute specifies the legal number intervals for an input field.
-*   Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.
-*   Tip: This attribute can be used together with the max and min attributes to create a range of legal values.
-*   The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
-
-autofocus
-
-*   `<input type="text" name="firstname" autofocus>`
-*   The input autofocus attribute specifies that an input field should automatically get focus when the page loads.
-
-list
-                                            
-• The input list attribute refers to a element that contains pre-defined options for an  element.
-```html
-    <input list="browsers">
-    <datalist id="browsers">    
-        <option value="Internet Explorer">Internet Explorer</option>
-        <option value="Firefox">Firefox</option>
-        <option value="Chrome">Chrome</option>
-        <option value="Opera">Opera</option>        
-        <option value="Safari">Safari</option>
-    </datalist>
-```
-
-autocomplete
-
-*   `<input type="text" name="firstname" autocomplete="off">`
-*   The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.
-*   Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.
-*   The autocomplete attribute works with `<form>` and the following `<input>` types: text, search, url, tel, email, password, datepickers, range, and color.
+|attribute|description|
+|---------|-----------|
+|value|* `<input type="text" value="John">`<br> * specifies an initial value for an input field|
+|readonly|*   `<input type="text" value="John" readonly>`<br>*   specifies that an input field is read-only.|
+|disabled|*   `<input type="text" value="John" disabled>`  <br>*   specifies that an input field should be disabled.|
+|size|*   `<input type="text" name="firstname" size="20">`  <br>*   specifies the visible width, in characters, of an input field.<br>*   The default value for size is 20|
+|maxlength|*   `<input type="text" name="firstname" maxlength="5">`  <br>*   specifies the maximum number of characters allowed in an input field.|
+|min|*   `<input type="date" name="dob" min="1980-11-31">`  <br>*   specify the minimum values for an input field.<br>*   min attributes work with the following input types: number, range, date, datetime-local, month, time and week.|
+|max|*   `<input type="date" name="dob" max="2023-04-01">`  <br>*   specify the maximum values for an input field.<br>*   max attributes work with the following input types: number, range, date, datetime-local, month, time and week.<br>|
+|multiple|*   `<input type="files" name="photos" multiple>`  <br>*   specifies that the user is allowed to enter more than one value in an input field.<br>*   attribute works with the following input types: email, and file.<br>|
+|pattern|*   `<input type="text" name="code" pattern="\[A-Za-z\]{3}">`  <br>*   The input pattern attribute specifies a regular expression that the input field's value is checked against, when the form is submitted.<br>*   The pattern attribute works with the following input types: text, date, search, url, tel, email, and password. |
+|placeholder |*   `<input type="text" name="firstname" placeholder="Enter Your First Name Here...">`  <br>*   The short hint is displayed in the input field before the user enters a value.<br>*   The placeholder attribute works with the following input types: text, search, url, tel, email, and password.<br>|
+|required|*   `<input type="text" name="firstname" required>`  <br>*   The input required attribute specifies that an input field must be filled out before submitting the form.<br>*   The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.|
+|step|*   `<input type="number" id="points" name="points" step="3">`  <br>*   The input step attribute specifies the legal number intervals for an input field.<br>*   Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.<br>*   Tip: This attribute can be used together with the max and min attributes to create a range of legal values.<br>*   The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+|autofocus|*   `<input type="text" name="firstname" autofocus>`<br>*   The input autofocus attribute specifies that an input field should automatically get focus when the page loads.|
+|list|* The input list attribute refers to a element that contains pre-defined options for an  element.<br> `<input list="browsers">`<br>`<datalist id="browsers">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<option value="Internet Explorer">Internet Explorer</option>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<option value="Firefox">Firefox</option>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<option value="Chrome">Chrome</option>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<option value="Opera">Opera</option>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<option value="Safari">Safari</option>`<br>`</datalist>`|
+|autocomplete|`<input type="text" name="firstname" autocomplete="off">`<br>*   The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.<br>*   Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.<br>*   The autocomplete attribute works with `<form>` and the following `<input>` types: text, search, url, tel, email, password, datepickers, range, and color.|
 
 Forms - Label Element
 ---------------------
@@ -466,12 +321,12 @@ Forms - Select Element
 *   By default, the first item in the drop-down list is selected.
 *   To define a pre-selected option, add the selected attribute to the option:
 ```html
-    <select name="programming" id="programming" multiple>
-        <option value="php">PHP</option>
-        <option value="py">Python</option>
-        <option value="js">Javascript</option>
-        <option value="mysql">MySql</option>
-    </select>
+<select name="programming" id="programming" multiple>
+    <option value="php">PHP</option>
+    <option value="py">Python</option>
+    <option value="js">Javascript</option>
+    <option value="mysql">MySql</option>
+</select>
 ```
 
 Forms - Textarea Element
@@ -494,11 +349,11 @@ Forms - Fieldset and Legend
 *   The fieldset element is used to group related data in a form.
 *   the legend element defines a caption for the fieldset element.
 ```html
-    <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" placeholder="Enter Your Name">
-    </fieldset>
+<fieldset>
+    <legend>Personal Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="Enter Your Name">
+</fieldset>
 ```
 
                                     

@@ -125,15 +125,15 @@ Boolean
 *   **Boolean primitive type:** JavaScript provides a Boolean primitive type that has two values of true and false.
 *   **Boolean object:** In addition to the boolean primitive type, JavaScript also provides you with the global Boolean() function, with the letter B in uppercase, to cast a value of another type to boolean.
 ```javascript
-    let a = Boolean('Hi');
-    console.log(a); //true
-    console.log(typeof(a)); // boolean
+let a = Boolean('Hi');
+console.log(a); //true
+console.log(typeof(a)); // boolean
 ```
 *   The Boolean is also a wrapper object of the Boolean primitive type. It means that when you pass either true or false to the Boolean constructor, it'll create a Boolean object.
 *   To get the primitive value back, you call the valueOf() method of the Boolean object.
 ```javascript
-    let b = new Boolean(false);
-    console.log(b.valueOf()); //false
+let b = new Boolean(false);
+console.log(b.valueOf()); //false
 ```
 
 String
@@ -143,22 +143,22 @@ String
 *   JavaScript strings are primitive values. Also, strings are immutable. It means that if you modify a string, you will always get a new string. The original string doesn't change.
 *   To create literal strings, you use either single quotes (') or double quotes (") like this:
 ```javascript
-    let str = "Hi";
-    let greeting = "Hello";
+let str = "Hi";
+let greeting = "Hello";
 ```
 *   ES6 introduced template literals that allow you to define a string backtick (\`) characters:
 ```javascript
-    let name = `John`;
+let name = `John`;
 ```
 *   The template literals allow you to use the single quotes and double quotes inside a string without the need of escaping them.
 ```javascript
-    let message = `"I'm good". She said"`;
+let message = `"I'm good". She said"`;
 ```
 *   Also, you can place the variables and expressions inside a template literal. JavaScript will replace the variables with their value in the string. This is called string interpolation. For example:
 ```javascript
-    let name = 'John';
-    let message = `Hi, I'm ${name}`;
-    console.log(message); // Hi, I'm John
+let name = 'John';
+let message = `Hi, I'm ${name}`;
+console.log(message); // Hi, I'm John
 ```
 *   Escaping special characters: To escape special characters, you use the backslash `\` character. For example:
 *   Windows line break: `'\r\n'`
@@ -167,24 +167,24 @@ String
 *   Backslash `'\'`
 *   Concatenating strings via `"+"` operator: To concatenate two or more strings,you use the `+` operator:
 ```javascript
-    let name = "John";
-    let str = 'Hello' + name;
-    console.log(str); // "Hello John"
+let name = "John";
+let str = 'Hello' + name;
+console.log(str); // "Hello John"
 ```
 *   If you want to assemble a string piece by piece, you can use the `+=` operator:
 ```javascript
-    let className = 'btn';
-    className += ' btn-primary';
-    className += ' none';
-    console.log(className); // btn btn-primary none
+let className = 'btn';
+className += ' btn-primary';
+className += ' none';
+console.log(className); // btn btn-primary none
 ```
 *   Comparing strings : To compare two strings, you use comparison operators such as `>`, `>=`, `<`, `<=`, and `==` operators.
 *   The comparison operators compare strings based on the numeric values of the characters. And it may return the string order that is different from the one used in dictionaries.
 ```javascript
-    let result = 'a' < 'b';
-    console.log(result); // true
-    let result = 'a' < 'B';
-    console.log(result); // false
+let result = 'a' < 'b';
+console.log(result); // true
+let result = 'a' < 'B';
+console.log(result); // false
 ``` 
 String Properties
 -----------------
@@ -247,20 +247,20 @@ how to create an object
 
 *   syntax
 ```javascript
-    let book = new Object();
+let book = new Object();
 ```
 *   JavaScript provides you with many ways to create an object. The most commonly used one is to use the object literal notation.
 ```javascript
-    let empty = {};
+let empty = {};
 ``` 
 *   To create an object with properties, you use the key:value within the curly braces.
 *   The person object has two properties firstName and lastName with the corresponding values 'John' and 'Doe'.
 *   When an object has multiple properties, you use a comma (,).
 ```javascript
-    let person = {
-        firstName: "John",
-        lastName: "Doe",
-        }
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+}
 ```
 
 Accessing properties
@@ -269,28 +269,28 @@ Accessing properties
 *   To access a property of an object, you use one of two notations: the dot notation and array-like notation.
 *   The dot notation( . )
 ```javascript
-    // objectName.propertyName
-    console.log(person.firstName);
-    console.log(person.lastName);
+// objectName.propertyName
+console.log(person.firstName);
+console.log(person.lastName);
 ```
 *   Array-like notation(\[\])
 ```javascript
-    // objectName['propertyName']
-    console.log(person['firstName']);
-    console.log(person['lastName']);
+// objectName['propertyName']
+console.log(person['firstName']);
+console.log(person['lastName']);
 ```
 *   When a property name contains spaces, you need to place it inside quotes. For example, the following address object has the 'building no' as a property:
 *   To access the 'building no' property, you need to use the array-like notation:
 *   If you use the dot notation, you'll get an error:
 *   Note that it is not a good practice to use spaces in the property names of an object.
 ```javascript
-    let address = {
-        'buliding no' : 3960,
-        street: 'North 1st stree',
-        state: 'CA',
-        country: 'USA'
-    }
-    console.log(address['building no']);
+let address = {
+    'buliding no' : 3960,
+    street: 'North 1st stree',
+    state: 'CA',
+    country: 'USA'
+}
+console.log(address['building no']);
 ```
 Modifying the value of a property
 ---------------------------------
@@ -298,12 +298,12 @@ Modifying the value of a property
 *   To change the value of a property, you use the assignment operator (=).
 *   we changed the value of the firstName property of the person object from 'John' to 'Jane'.
 ```javascript
-    let person = {
-        firstName: 'John',
-        lastName:'Doe'
-    };
-    person.firstName ='Jane';
-    console.log(person): // {firstName: 'Jane', lastName: 'Doe'}
+let person = {
+    firstName: 'John',
+    lastName:'Doe'
+};
+person.firstName ='Jane';
+console.log(person): // {firstName: 'Jane', lastName: 'Doe'}
 ```
 Adding a new property to an object
 ----------------------------------
@@ -311,7 +311,7 @@ Adding a new property to an object
 *   Unlike objects in other programming languages such as Java and C#, you can add a property to an object after object creation.
 *   The following statement adds the age property to the person object and assigns 25 to it:
 ```javascript
-    person.age = 25;
+person.age = 25;
 ```
 Deleting a property of an object
 --------------------------------
@@ -319,8 +319,8 @@ Deleting a property of an object
 *   To delete a property of an object, you use the delete operator:
 *   If you attempt to reaccess the age property, you'll get an undefined value.
 ```javascript
-    //delete objectName.propertyName;
-    delete person.age;
+//delete objectName.propertyName;
+delete person.age;
 ```
 Checking if a property exists
 -----------------------------
@@ -328,13 +328,13 @@ Checking if a property exists
 *   To check if a property exists in an object, you use the in operator:
 *   The in operator returns true if the propertyName exists in the objectName.
 ```javascript
-    let employee = {
-        firstName: 'Peter',
-        lastName: 'Doe',
-        employeeId:1
-    };
-    console.log('ssn' in employee); //false
-    console.log('emplyeeId' in employee); //true
+let employee = {
+    firstName: 'Peter',
+    lastName: 'Doe',
+    employeeId:1
+};
+console.log('ssn' in employee); //false
+console.log('emplyeeId' in employee); //true
 ```
 Summary
 -------
@@ -375,13 +375,13 @@ Array properties
 *   To access an element in an array, you specify an index in the square brackets \[\]: arrayName\[index\]
 *   To change the value of an element, you assign that value to the element like this:
 ```javascript
-    let mountains = ['Everest', 'Fuji', 'Nanga Parbat'];
-    mountains[2] = 'K2';
-    console.log(mountains); //['Everest', 'Fuji', 'K2'];
+let mountains = ['Everest', 'Fuji', 'Nanga Parbat'];
+mountains[2] = 'K2';
+console.log(mountains); //['Everest', 'Fuji', 'K2'];
 ```
 *   Getting the array size : Typically, the length property of an array returns the number of elements. The following example shows how to use the length property:
 ```javascript
-    console.log(mountains.length); //3
+console.log(mountains.length); //3
 ```
 Array Methods
 -------------
@@ -417,19 +417,19 @@ Array Destructuring
 *   The variables x, y and z will take the values of the first, second, and third elements of the returned array.
 *   Note that the square brackets \[\] look like the array syntax but they are not.
 ```javascript
-    let [x,y,z] = [70, 80, 90];
-    console.log(x); // 70
-    console.log(y); // 80
-    console.log(z); // 90
+let [x,y,z] = [70, 80, 90];
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // 90
 ```
 Spread Operator
 ---------------
 
 *   ES6 provides a new operator called spread operator that consists of three dots (...). The spread operator allows you to spread out elements of an iterable object such as an array, map, or set.
 ```javascript
-    const odd = [1, 3, 5];
-    const combined = [...odd, 2, 4, 6];
-    console.log(combined); // [1, 3, 5, 2, 4, 6];
+const odd = [1, 3, 5];
+const combined = [...odd, 2, 4, 6];
+console.log(combined); // [1, 3, 5, 2, 4, 6];
 ```
 Operator
 ========
@@ -487,29 +487,29 @@ Control Flow
 
 *   The if statement executes block if a condition is true.
 ```javascript
-    if(condition) {
-        // statements to execute
-    }
+if(condition) {
+    // statements to execute
+}
 ```
 *   if...else statement to execute a block if a condition is true and another block otherwise.
 ```javascript
-    if(condition) {
-        // statements to execute
-    } else {
-        // statements to execute
-    }
+if(condition) {
+    // statements to execute
+} else {
+    // statements to execute
+}
 ```
 *   if...else...if statement is to check multiple conditions and execute the corresponding block if a condition is true.
 ```javascript
-    if(condition 1) {
-        // statements to execute
-    } else if (condition 2) {
-        // statements to execute
-    } else if (condition 2) {
-        // statements to execute
-    } else {
-        // statements to execute
-    }
+if(condition 1) {
+    // statements to execute
+} else if (condition 2) {
+    // statements to execute
+} else if (condition 2) {
+    // statements to execute
+} else {
+    // statements to execute
+}
 ```
 *   you can use a ternary operator instead of the if-else statement.
 ```javascript
@@ -517,37 +517,37 @@ Control Flow
 ```
 *   The switch statement evaluates an expression, compares its result with case values, and executes the statement associated with the matching case value.
 ```javascript
-    switch(expression) {
-        case 1:
-            // statement here;
-            break;
-        case 2:
-            // statement here;
-            break;
-        case 3:
-            // statement here;
-            break;
-        default:
-            // statement here;
-    }
+switch(expression) {
+    case 1:
+        // statement here;
+        break;
+    case 2:
+        // statement here;
+        break;
+    case 3:
+        // statement here;
+        break;
+    default:
+        // statement here;
+}
 ```
 *   The JavaScript while statement creates a loop that executes a block as long as a condition evaluates to true.
 ```javascript
-    while(expression) {
-        // statement;
-    }`
+while(expression) {
+    // statement;
+}
 ```
 *   The do...while loop statement creates a loop that executes a block until a condition evaluates to false.
 ```javascript
-    do {
-        // statement;
-    } while(expression)
+do {
+    // statement;
+} while(expression)
 ```
 *   The for loop statement creates a loop with three optional expressions.
 ```javascript
-    for(initializer; condition; iterator) {
-        // statement here;
-    }
+for(initializer; condition; iterator) {
+    // statement here;
+}
 ```
 *   The break statement prematurely terminates a loop such as for, do...while, and while loop, a switch, or a label statement.
 *   The continue statement terminates the execution of the statement in the current iteration of a loop such as a for, while, and do…while loop and immediately continues to the next iteration.
@@ -559,15 +559,15 @@ Function
 *   JavaScript provides many built-in functions
 *   To declare a function, you use the function keyword, followed by the function name, a list of parameters, and the function body.
 ```javascript
-    function functionName(parameters) {
-        // code
-    }
+function functionName(parameters) {
+    // code
+}
 ```
 *   To use a function, you need to call it.
 *   Calling a function is also known as invoking a function.
 *   To call a function, you use its name followed by arguments enclosing in parentheses.
 ```javascript
-    functionName(arguments);
+functionName(arguments);
 ```
 *   The terms parameters and arguments are often used interchangeably. However, they are essentially different.
 *   When declaring a function, you specify the parameters. However, when calling a function, you pass the arguments that are corresponding to the parameters.
@@ -580,16 +580,16 @@ anonymous function
 *   An anonymous function is a function without a name.
 *   Note that if you don't place the anonymous function inside the (), you'll get a syntax error. The () makes the anonymous function an expression that returns a function object.
 ```javascript
-    (function(){
-        // ...                                             
-    })
+(function(){
+    // ...                                             
+})
 ```
 *   An anonymous function is not accessible after its initial creation. Therefore, you often need to assign it to a variable.
 ```javascript
-    let show = function() {                                                 
-        console.log('anonymous function');                                             
-    }                                             
-    show();
+let show = function() {                                                 
+    console.log('anonymous function');                                             
+}                                             
+show();
 ```
 *   The anonymous function has no name between the function keyword and parentheses ().
 *   Because we need to call the anonymous function later, we assign the anonymous function to the show variable.
@@ -600,8 +600,8 @@ arrow function
 
 *   ES6 arrow functions provide you with an alternative way to write a shorter syntax compared to the function expression.
 ```javascript
-    let add = (x,y) => x+y;
-    console.log(add(3,4)); // 7
+let add = (x,y) => x+y;
+console.log(add(3,4)); // 7
 ```
 Document Object Model
 =====================
