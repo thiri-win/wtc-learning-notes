@@ -91,7 +91,7 @@ echo $my_var;
 
 ## Floating point numbers
 ```php
-<?php
+
 $my_var = 3.14;
 echo $my_var;
 ?>
@@ -99,7 +99,7 @@ echo $my_var;
 ```
 ## Character strings
 ```php
-<?php
+
 $my_var ="Hypertext Pre Processor";
 echo $my_var;
 ?>
@@ -117,7 +117,7 @@ A Data type is the classification of data into a category according to its attri
 Integer – whole numbers e.g. -3, 0, 69. The maximum value of an integer is platform-dependent. On a 32 bit machine, it’s usually around 2 billion. 64 bit machines usually have larger values.  
 The constant `PHP_INT_MAX` is used to determine the maximum value.
 ```php
-<?php
+
 echo PHP_INT_MAX;
 ?>
 // Output: 9223372036854775807
@@ -169,7 +169,7 @@ echo PHP_INT_MAX;
 ## Variable Type Casting
 Type casting is converting a variable or value into a desired data type. This is very useful when performing arithmetic computations that require variables to be of the same data type. Type casting in PHP is done by the interpreter.
 ```php
-<?php
+
 $a = 1;
 $b = 1.5;
 $c = $a + $b;
@@ -183,7 +183,7 @@ There are two types of casting
 * Explicit Casting (Manual)
 ### Implicit Casting
 ```php
-<?php
+
 $x = 2;
 $y = 4;
 var_dump($x / $y); // 2/4 = 0.5 (Float)
@@ -193,7 +193,7 @@ var_dump($y / $x); // 4/2 = 2 (Int)
 ### Explicit Casting
 Casting to an integer. Both (int) and (integer) casts are valid.
 ```php
-<?php
+
 $x = 5.35;
 $y = (int) $x; // cast $x to integer
 var_dump($y);
@@ -201,7 +201,7 @@ var_dump($y);
 ```
 Example:
 ```php
-<?php
+
 $x = '25';
 $y = (integer) $x; // cast $x to int
 var_dump($y);
@@ -209,7 +209,7 @@ var_dump($y);
 ```
 Example:
 ```php
-<?php
+
 $string = '10 Animals';
 $numberOfAnimals = (int) $string;
 echo $numberOfAnimals;
@@ -217,7 +217,7 @@ echo $numberOfAnimals;
 ```
 `var_dump` function is used to determine the data type.
 ```php
-<?php
+
     $a = 1;
     var_dump($a);
     $b = 1.5;
@@ -242,20 +242,20 @@ echo $numberOfAnimals;
 # PHP Constant
 **Define constant** – A constant is a variable whose value cannot be changed at runtime. To define a constant, you use the `define()` function. The `define()` function takes the constant’s name as the first argument and the constant value as the second argument. For example:
 ```php
-<?php
+
     define('WIDTH','1140px');
     echo WIDTH;
 ?>
 ```
 constant names are uppercase. Unlike a variable, the constant name doesn’t start with the dollar sign(`$`). a constant can hold a simple value like a number, a string, a boolean value. From PHP 7.0, a constant can hold an array. For example:
 ```php
-<?php
+
     define( 'ORIGIN', [0, 0] );
 ?>
 ```
 The following example uses the const keyword to define the SALES_TAX constant:
 ```php
-<?php
+
     const SALES_TAX = 0.085;
     $gross_price = 100;
     $net_price = $gross_price * (1 + SALES_TAX);
@@ -268,7 +268,7 @@ The following example uses the const keyword to define the SALES_TAX constant:
 time.  
 use the `define()` function to define a constant conditionally
 ```php
-<?php
+
     if(condition)
     {
         define('WIDTH', '1140px');
@@ -277,7 +277,7 @@ use the `define()` function to define a constant conditionally
 ```
 cannot use the const keyword to define a constant this way.
 ```php
-<?php
+
     if(condition)
     {
         const WIDTH = '1140px';
@@ -297,7 +297,7 @@ Conditional Statements allow you to branch the path of execution in a script bas
 **If Statements**  
 Example:
 ```php
-<?php
+
     $x=1;
     if ($x == 1)
     print '$x is equal to 1';
@@ -305,7 +305,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $age = 50;
     if ($age > 30)
     {
@@ -316,7 +316,7 @@ Example:
 **Else Statements**  
 Example:
 ```php
-<?php
+
     $x=1;
     if ($x == 2) {
         print 'x is equal to 2';
@@ -327,7 +327,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $age = 50;
     if ($age < 30){
         echo "Your age is less than 30!";
@@ -339,7 +339,7 @@ Example:
 ```
 more than one statement
 ```php
-<?php
+
     $x=1;
     if ($x == 1) {
         print 'x is equal to 1';
@@ -350,7 +350,7 @@ more than one statement
 ```
 Example:
 ```php
-<?php
+
     $year = 2014; // Leap years are divisible by 400 or by 4 but not 100
     if(($year % 400 == 0) || (($year % 100 != 0) && ($year % 4 == 0))){
         echo "$year is a leap year.";
@@ -361,7 +361,7 @@ Example:
 ```
 **Else If Statements**
 ```php
-<?php
+
     $x=1;
     if ($x == 2) {
         print 'x is equal to 2';
@@ -377,7 +377,7 @@ Example:
 **Switches**
 Switches are a good alternative to If/Else if/Else Statements in situations where you want to check multiple values against a single variable or condition.
 ```php
-<?php
+
     $var = "yes";
     switch ($var) {
     case "maybe":
@@ -393,7 +393,7 @@ Switches are a good alternative to If/Else if/Else Statements in situations wher
 ```
 Similar to the Break Statement is the Exit Statement. Exit is particularly useful in situations where you run into what would be considered a "fatal error" (for example, if the user had entered a password that was incorrect) or any other time you needed to end the execution of a script before it naturally terminated.
 ```php
-<?php
+
     $var = "yes";
     switch ($var) {
     case "yes":
@@ -409,7 +409,7 @@ Similar to the Break Statement is the Exit Statement. Exit is particularly usefu
 Unlike break, exit may be used anywhere in your scripts, inside or outside of control structures.  
 **The Ternary Operator ( ? : )**
 ```php
-<?php
+
     $x = 1;
     ($x==1) ? (print '$x is equal to 1') : (print '$x is not equal to 1');
 ?>
@@ -420,7 +420,7 @@ Code is executed repeatedly as long as a condition evaluates to true, and as soo
 **While Loops**
 Example:
 ```php
-<?php
+
     $x=1;
     while ($x <=10){
         print "$x<br>";
@@ -430,7 +430,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $max = 0;
     echo $i = 0;
     echo ",";
@@ -450,7 +450,7 @@ Example:
 **Do…While Loops**  
 Example:
 ```php
-<?php
+
     $x = 11;
     do {
         print $x . "<br>";
@@ -460,7 +460,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $i = 1;
     $sum = 0;
     do {
@@ -472,7 +472,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $even = "";
     $odd = "";
     $i = 1;
@@ -494,7 +494,7 @@ Example:
 **For Loops**
 Example:
 ```php
-<?php
+
     for ($x = 1; $x <= 10; $x++) {
         print $x . "<br>";
     }
@@ -502,7 +502,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $d = 0;
     $e = 0;
     for ($i = 0; $i < 5; $i++) {
@@ -514,7 +514,7 @@ Example:
 ```
 Example;
 ```php
-<?php
+
     echo "List of the Natural Numbers between 1-30 :: ";
     $j = 0;
     for ($i = 1; $i <= 30; $i++) {
@@ -529,7 +529,7 @@ Example;
 ```
 Example:
 ```php
-<?php
+
     $brush_price = 5;
     echo "<table border=\"1\" align=\"center\">";
     echo "<tr><th>Quantity</th>";
@@ -561,12 +561,12 @@ Syntax:
 # PHP Array
 Array is a data structure which allows you to store multiple elements in a single variable.
 ```php
-<?php
+
     $array_fruits = array('Apple', 'Orange', 'Watermelon', 'Mango');
 ?>
 ```
 ```php
-<?php
+
     $color1 = "Red";
     $color2 = "Green";
     $color3 = "Blue";
@@ -587,14 +587,14 @@ $array = [];
 ## Numeric Arrays
 The filled or indexed array is an array where all key values are numeric and always start from zero. You can define this array as below.
 ```php
-<?php
+
     //Define an indexed array
     $colors = array("Red", "Green", "Blue");
     $colors = array(0 => "Red", 1 => "Green", 2 => "Blue");
 ?>
 ```
 ```php
-<?php
+
     // create an array already initialized with values
     $array = [];
     $array[] = 'One';
@@ -608,7 +608,7 @@ The filled or indexed array is an array where all key values are numeric and alw
 ```
 ## Array Elements
 ```php
-<?php
+
     $array = ['One', 'Two', 'Three'];
     // get the first element of the $array array
     echo $array[0];
@@ -622,7 +622,7 @@ The filled or indexed array is an array where all key values are numeric and alw
 ?>
 ```
 ```php
-<?php
+
     $empty_array = array();
     $my_array1 = array("apple", "banana", "mango", "peach");
     $my_array2[0] = "joe";
@@ -635,13 +635,13 @@ The filled or indexed array is an array where all key values are numeric and alw
 ## Associative Arrays
 The keys are well defined with respect to the data that index holds as shown in the below example.
 ```php
-<?php
+
 $ages = array("Zaid" => 26, "Ali" => 30, "John" => 28, "Cris" => 28, "Clark" => 28);
 ?>
 ```
 Example:
 ```php
-<?php
+
     $movie = array(
         0 => "Shaolin Monk",
         1 => "Drunken Master",
@@ -653,7 +653,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");
     print_r($persons);
     echo "";
@@ -662,7 +662,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     // Associative array
     $person_weight = array(
         "Rajnish" => 58,
@@ -681,7 +681,7 @@ Example:
 ## Multidimensional Arrays
 In a multidimensional array, there are one or more arrays between the array. So, you can say the sub-array of the first array.
 ```php
-<?php
+
     $movies = array(
         "comedy" => array("Pink Panther", "John English", "See no evil hear no evil"),
         "action" => array("Die Hard", "Expendables"),
@@ -692,7 +692,7 @@ In a multidimensional array, there are one or more arrays between the array. So,
 ```
 Example:
 ```php
-<?php
+
     //column Multi D Array
     $a[0][0] = "value0";
     $a[0][1] = "value1";
@@ -713,7 +713,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     //Row Multi D Array
     $name = array(
         array("ajay", "kumar", 10),
@@ -730,7 +730,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $d = array(
     "sunday" => array("cost", "first", 10),
     "monday" => array("cost1", "second", 20),
@@ -745,7 +745,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $my_array1 = array("apple", "banana", "mango", "peach");
     echo $my_array1[0] . "<br>";
     echo $my_array1[2] . "<br>";
@@ -757,7 +757,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $users = ['john', 'dave', 'tim'];
     for ($i = 0; $i < count($users); $i++)
     echo $users[$i] . "<br>";
@@ -765,7 +765,7 @@ Example:
 ```
 Example:
 ```php
-<?php
+
     $users = ['john', 'dave', 'tim'];
     foreach ($users as $user)
     echo $user . "<br>";
@@ -775,7 +775,7 @@ Example:
 **length of an array**
 The length of an array, i.e, the number of elements present in the array can be counted using the in-built function `count()`.
 ```php
-<?php
+
     //Method 1 to create an array
     $my_array1 = array("apple", "banana", "mango", "peach");
     //calculating length of the array
@@ -784,20 +784,20 @@ The length of an array, i.e, the number of elements present in the array can be 
 **array_keys() function**
 The array_keys() function is used to get all the keys or a subset of the keys of an array.
 ```php
-<?php
+
     $array1 = array("Orange" => 100, "Apple" => 200, "Banana" => 300, "Cherry" => 400);
     print_r(array_keys($array1));
 ```
 **array_values() function**
 array_values — Return all the values of an array
 ```php
-<?php
+
     $array = array("size" => "XL", "color" => "gold");
     print_r(array_values($array));
 ```
 Example:
 ```php
-<?php
+
     $Flower = array('flower1' => null, 'flower2' => null, 'flower3' => null, 'flower4' => null);
     echo "Actual Array: ";
     print_r($Flower);
@@ -808,7 +808,7 @@ Example:
 **array_push() function**
 array_push — Push one or more elements onto the end of array
 ```php
-<?php
+
     $arr = ['apple', 'orange', 'mango'];
     array_push($arr, 'strawberry');
     print_r($arr);
@@ -816,7 +816,7 @@ array_push — Push one or more elements onto the end of array
 **array_unshift() function**
 array_unshift — Prepend one or more elements to the beginning of an array
 ```php
-<?php
+
     $arr = ['apple', 'orange', 'mango'];
     array_unshift($arr, 'watermelon');
     print_r($arr);
@@ -824,7 +824,7 @@ array_unshift — Prepend one or more elements to the beginning of an array
 **array_pop() function**
 array_pop — Pop the element off the end of array
 ```php
-<?php
+
     $arr = ['apple', 'orange', 'mango'];
     array_pop($arr);
     print_r($arr);
@@ -832,7 +832,7 @@ array_pop — Pop the element off the end of array
 **array_shift() function**
 array_shift — Shift an element off the beginning of array
 ```php
-<?php
+
     $arr = ['apple', 'orange', 'mango'];
     array_shift($arr);
     print_r($arr);
@@ -840,7 +840,7 @@ array_shift — Shift an element off the beginning of array
 *array_map()*
 array_map — Applies the callback to the elements of the given arrays
 ```php
-<?php
+
     $fruits = ['apple', 'orange', 'mango'];
     $arrmap = array_map(function($f) {
         return strtoupper($f);
@@ -850,7 +850,7 @@ array_map — Applies the callback to the elements of the given arrays
 **list()**
 list — Assign variables as if they were an array
 ```php
-<?php
+
     $fruits = ['apple', 'orange', 'mango'];
     list($f1, $f2, $f3) = $fruits;
     echo $f1;
@@ -860,7 +860,7 @@ list — Assign variables as if they were an array
 **array_walk()**
 The `array_walk` is an array function provided by PHP which applies the given function to each element in the array, hence the name `array_walk`.
 ```php
-<?php
+
 
 $users = ['john', 'dave', 'tim'];
 function print_item($item, $key)
@@ -871,7 +871,7 @@ array_walk($users, 'print_item');
 ```
 Example:
 ```php
-<?php
+
 
 function myfunction($value, $key) {
     $value = "yellow";
@@ -917,7 +917,7 @@ The explode function splits a string by a given delimiter and returns an array w
 the delimiters.  
 *Limit is unspecified* :
 ```php
-<?php
+
 
 $str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
 $exploded = explode(",", $str);
@@ -925,7 +925,7 @@ print_r($exploded); //Print the array to the screen;
 ```
 *Limit is positive* :
 ```php
-<?php
+
 
 $str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
 $exploded = explode(",", $str, 5);
@@ -934,7 +934,7 @@ print_r($exploded); //Print the array to the screen;
 **implode()**
 The implode function does the exact opposite of the explode function. It converts an array into a string, with each array element separated by a delimiter.
 ```php
-<?php
+
 
 $column_heading = ['first_name', 'age', 'phone number', 'address'];
 $sample_header = implode('; ', $column_heading);
@@ -942,7 +942,7 @@ echo $sample_header;
 ```
 Example:
 ```php
-<?php
+
 
 $trial = array('This', 'is', 'PHP', 'simplified');
 echo implode("|", $trial);
@@ -952,7 +952,7 @@ echo implode("_", $trial);
 ```
 Example:
 ```php
-<?php
+
 
 $details = [
     'company_name' => 'Frank',
@@ -965,14 +965,14 @@ echo implode(',', $details);
 The `str_split` function takes a string to turn into an array, and splits the string into an array, with each of the characters being a separate character.
 *No length specified* :
 ```php
-<?php
+
 $to_split = "Hello, World!";
 print_r(str_split($to_split));
 ?>
 ```
 *Length specified* :
 ```php
-<?php
+
 $string = "hello world how are you";
 print_r(str_split($string, 10));
 ?>
@@ -981,13 +981,13 @@ print_r(str_split($string, 10));
 **trim()**
 The `trim()` function removes whitespace characters from the beginning and end of a string on default settings, but can also remove other characters if specified
 ```php
-<?php
+
 $string = "Hay Thar! ";
 echo trim($string);
 ?>
 ```
 ```php
-<?php
+
 $string = "Hay Thar!";
 $trimmed = trim($string, "HoWdy!");
 echo $trimmed;
@@ -996,7 +996,7 @@ echo $trimmed;
 **rtrim()** and **ltrim()**  
 These are the same as trim, except they only do it from one end. rtrim trims from the end, and ltrim trims from the beginning.
 ```php
-<?php
+
 $string = " website";
 echo "Welcome to the " . ltrim($string);
 ?>
@@ -1004,14 +1004,14 @@ echo "Welcome to the " . ltrim($string);
 **addslashes**  
 This function takes one input string and returns a string with all of the quotation marks escaped by a slash.
 ```php
-<?php
+
 $string = "I am about to land at O'Hare airport in Chicago, Illinois";
 echo addslashes($string);
 ?>
 ```
 **stripslashes()**
 ```php
-<?php
+
 $string = "I am about to land at O\'Hare airport in Chicago, Illinois";
 echo stripslashes($string);
 ?>
@@ -1019,7 +1019,7 @@ echo stripslashes($string);
 **strip_tags()**  
 `strip_tags()` is another security feature, to prevent people from entering HTML tags into forms. This is useful because otherwise, people could enter new forms, and submit them, as well as Javascript, and Iframes containing malicious code.
 ```php
-<?php
+
 $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
 echo strip_tags($text);
 echo "<br>";
@@ -1031,7 +1031,7 @@ echo strip_tags($text, '<p><a>');
 `substr()` takes a string and a location to start in that string, and returns the substring starting at the location specified going to the end of the string  
 *no length specified* :
 ```php
-<?php
+
 $string = "hello, world!";
 echo $string . "<br>";
 $substring = substr($string, 4);
@@ -1040,7 +1040,7 @@ echo $substring;
 ```
 *length specified* :
 ```php
-<?php
+
 $string = "hello, world!";
 echo $string . "<br>";
 $substring = substr($string, 4, 4);
@@ -1051,7 +1051,7 @@ echo $substring;
 `strpos()` finds the location of a substring in a string.  
 *Optional parameter offset not specified*:
 ```php
-<?php
+
 $haystack = "Welcome PHP";
 echo $haystack . "<br>";
 $location = strpos($haystack, "c");
@@ -1060,7 +1060,7 @@ echo "The character c is found at character $location in $haystack";
 ```
 *Optional parameter offset specified* :
 ```php
-<?php
+
 $haystack = "Welcome PHP";
 echo $haystack . "<br>";
 $location = strpos($haystack, "e", 5);
@@ -1070,7 +1070,7 @@ echo "The character e is found at character $location in $haystack";
 **stripos()**
 `stripos()` does the same thing as strpos, except that it is case-insensitive. The syntax and parameters are exactly the same as strops.
 ```php
-<?php
+
 $haystack = "hello, world!";
 echo $haystack . "<br>";
 $location = stripos($haystack, "L");
@@ -1081,7 +1081,7 @@ echo "The character L is found at character $location in $haystack";
 `strstr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for  
 Example:
 ```php
-<?php
+
 $haystack = "foo@bar.com";
 echo $haystack . "<br>";
 $domain = strstr($haystack, "@");
@@ -1089,7 +1089,7 @@ echo $domain;
 ```
 Example:
 ```php
-<?php
+
 $haystack = "foo@bar.com";
 echo $haystack . "<br>";
 $username = substr($haystack, 0, strpos($haystack, "@"));
@@ -1098,7 +1098,7 @@ echo $username;
 **stristr() (case insensitive strstr)**  
 `stristr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for
 ```php
-<?php
+
 $haystack = "FoO@bAr.cOm";
 $needle = "@Ba";
 $substring = stristr($haystack, $needle);
@@ -1109,7 +1109,7 @@ echo "$haystack <br> $substring";
 `str_replace()` replaces certain substrings in a string with other substrings.  
 *No Limit Specified*:
 ```php
-<?php
+
 $string = "hello. My name is bob. This is my friend bob.";
 $find = "bob";
 $replace = "joe";
@@ -1119,7 +1119,7 @@ echo $string . "<br>" . $result;
 ```
 *Search value is an array* :
 ```php
-<?php
+
 $string = "hello. My name is bob. This is my friend bob.";
 $find = array("bob", "friend");
 $replace = "joe";
@@ -1129,7 +1129,7 @@ echo $string . "<br>" . $result;
 ```
 *Both values are array* :
 ```php
-<?php
+
 $strings = array("hello. My name is bob. This is my friend bob.", "Hello. My name is bill. This is my friend jill");
 $find = array("bob", "friend", "bill", "jill");
 $replace = array("joe", "worst enemy", "will", "jane");
@@ -1140,7 +1140,7 @@ print_r($result); //Echo $result to the screen
 **str_ireplace()**  
 `str_ireplace()` is a case-insensitive version of str_replace
 ```php
-<?php
+
 $string = "Hi! My name is Bob.";
 $find = "bob"; //Notice that the b is lowercase here, but uppercase here
 $replace = "Joe";
@@ -1161,7 +1161,7 @@ function functionName(){
 ```
 *No Argument Function* :
 ```php
-<?php
+
 function call() {
     echo "PHP Function";
 }
@@ -1170,7 +1170,7 @@ call(); // calling function
 ```
 Example:
 ```php
-<?php
+
 function whatIsToday()
 {
     echo "Today is " . date('l');
@@ -1181,7 +1181,7 @@ whatIsToday();
 ```
 **Functions with Parameters** :
 ```php
-<?php
+
 function customFont($font, $size = 1.5) {
     echo "<p style=\"font-family: $font; font-size: {$size}em;\">Hello, world!</p>";
 }
@@ -1193,7 +1193,7 @@ customFont("Courier");
 ```
 ## Returning Values from a Function
 ```php
-<?php
+
 function getSum($num1, $num2) {
     $total = $num1 + $num2;
     return $total;
@@ -1203,7 +1203,7 @@ echo getSum(5, 10); // Outputs: 15
 ```
 ```php
 
-<?php
+
 function divideNumbers($dividend, $divisor) {
     $quotient = $dividend / $divisor;
     $array = array($dividend, $divisor, $quotient);
@@ -1346,7 +1346,6 @@ display(1);
 `filter_var()` is a PHP function used to filters a variable with the help of a specified filter. we can use `filter_var()` function to validate and sanitize a data such as email id, IP address etc.
 1. Sanitize and Validate an Email Address
 ```php
-<?php
 $email = "test@test.com";
 // Remove all illegal characters from email
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -1356,21 +1355,17 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 } else {
     echo ("$email is not a valid email address");
 }
-?>
 ```
 2. Sanitize a String
 ```php
-<?php
 // Variable to check
 $string = "<p><strong>This is a Stechies !</strong></p>";
 // Remove all illegal characters from string
 $string = filter_var($string, FILTER_SANITIZE_STRING);
 echo $string;
-?>
 ```
 3. Validate an Integer Number
 ```php
-<?php
 // Variable to check
 $intnum = 1000022;
 if (filter_var($intnum, FILTER_VALIDATE_INT)) {
@@ -1378,11 +1373,9 @@ if (filter_var($intnum, FILTER_VALIDATE_INT)) {
 } else {
     echo ("$intnum is not a valid integer number");
 }
-?>
 ```
 4. Validate a float Number
 ```php
-<?php
 // Variable to check
 $intnum = 11.11;
 if (filter_var($intnum, FILTER_VALIDATE_FLOAT)) {
@@ -1390,11 +1383,9 @@ if (filter_var($intnum, FILTER_VALIDATE_FLOAT)) {
 } else {
     echo ("$intnum is not a valid float number");
 }
-?>
 ```
 5. Validate an IP Address
 ```php
-<?php
 // Variable to check
 $ipadd = '192.168.1.1';
 if (filter_var($ipadd, FILTER_VALIDATE_IP)) {
@@ -1402,11 +1393,9 @@ if (filter_var($ipadd, FILTER_VALIDATE_IP)) {
 } else {
     echo ("$ipadd is not a valid IP address");
 }
-?>
 ```
 6. Sanitize and Validate a URL
 ```php
-<?php
 // Variable to check
 $url = "https://www.stechies.com/";
 // Remove all illegal characters from url
@@ -1417,7 +1406,6 @@ if (!filter_var($url, FILTER_VALIDATE_URL) == false) {
 } else {
     echo ("$url is not a valid URL");
 }
-?>
 ```
 ## Summary
 * Function in PHP is a section of code in a program that is written to perform a specific task.
@@ -1443,8 +1431,8 @@ result.
 ```php
 <html>
     <body>
-    Your pet breed is: <?php echo $_POST["breed"]; ?><br>
-    Color is: <?php echo $_POST["color"]; ?>
+        Your pet breed is: <?php echo $_POST["breed"]; ?> <br>
+        Color is: <?php echo $_POST["color"]; ?>
     </body>
 </html>
 ```
@@ -1453,22 +1441,18 @@ result.
 ## File open modes
 When opening a file, there are several different modes you can use. The most common ones are r and w for read and write. There are several more available though that will control whether you create a new file, open an existing file, and whether you start writing at the beginning or the end. These modes are used with `fopen()` in the rest of the examples.  
 **Write to a file**  
-When writing files you have two primary options that we will look at:  
+When writing files you have two primary options that we will look at:    
 Writing bytes as needed with `fwrite()`  
 Writing the entire file contents at once with `file_put_contents()`  
 **WRITE BYTES**
 ```php
-<?php
 $file = fopen('hello.txt', "w") or die("Unable to open file!");
 fwrite($file, "Hello, world!");
 fclose($file);
-?>
 ```
 **WRITE ENTIRE FILE AT ONCE**
 ```php
-<?php
 file_put_contents('hello.txt', "I am Healthy!");
-?>
 ```
 **Read from a file**  
 When reading a file you have the same two primary options that we will look at:  
@@ -1476,31 +1460,24 @@ Reading bytes as needed with `fread()`
 Reading the entire file in to a variable with `file_get_contents()`  
 **READ BYTES**
 ```php
-<?php
 $filename = 'hello.txt';
 $number_of_bytes_to_read = filesize($filename);
 $file = fopen($filename, 'r');
 $contents = fread($file, $number_of_bytes_to_read);
 echo $contents;
-?>
 ```
 **READ ENTIRE FILE AT ONCE**
 ```php
-<?php
 $contents = file_get_contents('hello.txt');
 echo $contents;
-?>
 ```
 **READ ALL LINES OF A TEXT FILE**
 ```php
-<?php
 $lines = file('hello.txt');
 print_r($lines);
-?>
 ```
 **GET FILESIZE**
 ```php
-<?php
 echo filesize('hello.txt'); 
 ```
 **FILE EXISTS**
@@ -1512,13 +1489,10 @@ Use the `getcwd()` Function to Get the Current Directory Name in PHP
 Use the `dirname(__FILES__)` Function to Get the Current Directory Name in PHP  
 Use the `basename()` function to get the current directory name in PHP
 ```php
-<?php
 echo basename(dirname(__FILE__)) . "<br>";
 echo basename(getcwd()) . "<br>";
-?>
 ```
 ```php
-<?php
 // Define the path to your file
 $path_to_file = (dirname(__FILE__)) ."\hello.txt";
 if (file_exists($path_to_file)) {
@@ -1528,13 +1502,10 @@ if (file_exists($path_to_file)) {
 }
 // echo basename(dirname(__FILE__))."<br>";
 // echo basename(getcwd())."<br>";
-?>
 ```
 **CHECK IF FILE IS A DIRECTORY**  
 To check if a directory entry is a file or a directory, you can use `is_dir()` function.
 ```php
-<?php
-
 $file = "hello.txt";
 mkdir("documents"); // make directory folder
 if (is_dir($file)) {
@@ -1550,18 +1521,15 @@ if (is_dir("documents")) {
 } else {
     echo ("Documents is not a directory");
 }
-?>
 ```
 **How to change directory of the running PHP script**  
 ```php
-<?php
 // current directory
 echo getcwd() . "<br>";
 // change directory
 chdir('Documents');
 // current directory
 echo getcwd() . "<br>";
-?>
 ```
 If the directory you specified doesn’t exist, then the function will produce a warning as shown below:
 
@@ -1578,12 +1546,10 @@ PHP contains built-in functions that can be used to handle JSON.
 * `json_decode()`: used to turn a JSON object into an array.  
 These functions are the opposite of each other.
 ```php
-<?php
 $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
 echo json_encode($age);
 ```
 ```php
-<?php
 $jsonobj = '{"John":23,"Jack":"25", "Joe":31}';
 $obj = json_decode($jsonobj);
 echo $obj->John . "<br>";
@@ -1592,7 +1558,6 @@ echo $obj->Joe . "<br>";
 ```
 **Looping Through A JSON**
 ```php
-<?php
 $jsonobj = '{"John":23,"Jack":"25", "Joe":31}';
 $obj = json_decode($jsonobj);
 foreach ($obj as $key => $value) {
@@ -1600,21 +1565,17 @@ foreach ($obj as $key => $value) {
 }
 ```
 **To get the current directory**
-`__DIR__`: This constant is used to get the current directory of the file. This is equivalent to the
-dirname(`__FILE__`).
+`__DIR__`: This constant is used to get the current directory of the file. This is equivalent to the dirname(`__FILE__`).
 ```php
-<?php 
 echo "The current directory of this file is '" . `__DIR__` . "'.<br>";
 ```
 **To get the current filename with full file path**
 ```php
-<?php 
 echo "The current file with path is '" . `__FILE__` . "'.<br>";
 ```
 **To get the current line number**  
 `__LINE__`: This is used to return the current line number of the file.  
 ```php
-<?php 
 echo "The line number of this code is '" . `__LINE__` . "'.<br>";  
 ```
 **Delete a Directory**
@@ -1622,14 +1583,13 @@ echo "The line number of this code is '" . `__LINE__` . "'.<br>";
 * Use Recursion to Delete Non-Empty Directory in PHP  
 **Empty Directory**
 ```php
-<?php
 $path = "testing";
 if (is_dir($path)) {
     rmdir($path);
     echo "the directory is deleted";
 }
-?>
 ```
+
 # Object-Oriented Programming in PHP
 The PHP Object-Oriented Programming concepts are:
 * Class
@@ -1644,8 +1604,6 @@ When class is created, we can create any number of objects in that class. The ob
 ## Calling Member Function
 When the object is created, we can access the variables and method function of the class with the help of operator ‘->, accessing the method is done to get the information of that method.
 ```php
-<!-- php-oop.php -->
-<?php
 // classs with properties and method
 class Car
 {
@@ -1655,15 +1613,12 @@ class Car
         return "$this->make has white color";
     }
 }
-?>
 ```
 ```php
-<?php
 // instantiate a Class
 $nissan = new Car;
 $nissan->make = "Nissan";
 echo $nissan->color();
-?>
 ```
 
 ## Constructor And Destructor
@@ -1671,8 +1626,6 @@ PHP constructor function is called when the object is created.
 The magic method `__construct()` is known as a constructor that is automatically called whenever a new object is created.  
 keep in mind that the construct function starts with two underscores (`__`).
 ```php
-<!-- constr.php -->
-<?php
 // classes with constructor method
 class Car
 {
@@ -1688,12 +1641,10 @@ class Car
 }
 $kia = new Car("KIA");
 $kia->color();
-?>
 ```
 `__destruct()` method is executed automatically when the object is destroyed.  
 keep in mind that the destructor function starts with two underscores (`__`).
 ```php
-<!-- destr.php -->
 <?php
 class House
 {
@@ -1710,8 +1661,8 @@ class House
     }
 }
 $blackHouse = new House("John's House", "black");
-?>
 ```
+
 ## Access Modifiers
 PHP supports various keywords to make any variable to access any variable and the identifiers.  
 Assign these keywords to the class, function or identifiers.  
@@ -1726,8 +1677,8 @@ Can use these access modifiers as per our business need to grant permission or r
 |---------------|-----------|--------------|--------------|
 |public|NA|YES|YES|
 |private|NA|YES|YES|
-|protected|NA|YES|YES
-|abstract|YES|YES|NA
+|protected|NA|YES|YES|
+|abstract|YES|YES|NA|
 |final|YES|YES|NA|
 |static|NA|YES|YES|
 
@@ -1744,8 +1695,6 @@ class.
 It can be used within the same class and from the subclass.  
 
 ```php
-<!-- phpacc.php -->
-<?php
 // access control -> public, protected, private
 class Car
 {
@@ -1768,11 +1717,10 @@ echo $subaru->brand;
 echo $subaru->model; // cannot access protected property // same with method
 echo $subaru->carno; // cannot access private property // same with method
 echo $subaru->drive();
-?>
 ```
 **abstract classes**  
 **abstract classes** are something going with inheritance.  
-Abstract classes have abstract methods in it which they need their children (child classes) to override when inheriting.
+Abstract classes have abstract methods in it which they need their children (child classes) to override when inheriting.  
 **Declaring Abstract Methods**  
 * If a class is abstract, you cannot create an object of that class.
 * Abstract methods only define the method’s signature, without the body.
@@ -1781,17 +1729,16 @@ Abstract classes have abstract methods in it which they need their children (chi
 
 a class is an `abstract` class, you need to use the `abstract` keyword like this:
 ```php
-<?php
 abstract class Electronic
 {
     public $pwrConsumption;
 }
 ```
 Cannot create objects of this class, but you must create a child class first.  
+
 **Add abstract methods to the class**
 An abstract method is a class method that only defines the method’s signature, without the body.
 ```php
-<?php
 abstract class Electronic
 {
     public $pwrConsumption;
@@ -1799,7 +1746,9 @@ abstract class Electronic
     abstract public function turnOff();
 }
 ```
+
 A class that contains at least one abstract method, must be an abstract class.
+
 ```php
 <?php
 class MyClass
@@ -1807,11 +1756,11 @@ class MyClass
     abstract public function myMethod();
 }
 ```
+
 It is an error because there is no abstract keyword before the class:  
 The role of abstract methods is to set a requirement for children classes.
-```php
-<?php
 
+```php
 abstract class MyClass
 {
     abstract public function myMethod();
@@ -1825,10 +1774,9 @@ class ConcreteClass extends MyClass
     }
 }
 ```
+
 **Class Inheritance**
 ```php
-<!-- Car.php -->
-<?php
 // inherit a class
 class Car
 {
@@ -1842,9 +1790,7 @@ class Car
         return "The car brand is $this->name <br>";
     }
 }
-```
-```php
-<?php
+
 class Toyota extends Car
 {
     public $model;
@@ -1862,28 +1808,29 @@ $probox = new Toyota("Toyota", "Probox");
 echo $probox->name();
 echo $probox->model();
 ```
+
 **Final classes**
 Inheritance allows for enormous flexibility within a class hierarchy. You can create subclasses to extend the functionality of a base class, but PHP OOP gives the possibility to create classes that cannot be extended. Such a class is called final class.  
 A final class is declared by adding the final keyword before the class word.
 ```php
-<?php
 final class Base
 {
     //code here
 }
+
 // define a child class derivated from Base
 class BaseChild extends Base
 {
     //code here
 }
 // Output: Fatal error: Class BaseChild may not inherit from final class (Base) in ...
-?>
 ```
+
 **Final methods**
 A normal method (public or protected) can be overridden in the child class. If you want a method to remain fixed and unchanging, prefix the definition with the final keyword.  
-A final method cannot be overridden.
+A final method cannot be overridden.  
+
 ```php
-<?php
 // base class
 class Base
 {
@@ -1904,13 +1851,11 @@ class BaseChild extends Base
     }
 }
 // Output: Fatal error: Cannot override final method Base::testMethod() in ...
-?>
 ```
+
 **Static Class**  
 A static method is a method that is not invoked on any object. when you are creating a static method, inside of it there is no mention of the keyword `$this`. The keyword `$this` is used only for non-static methods. Since there is no object with static methods, there is no use of the keyword `$this`.
 ```php
-<!-- staticclass.php -->
-<?php
 // static => direct use from class
 class Car
 {
@@ -1935,39 +1880,33 @@ There are four types of PHP error handling best practices and they are as follow
 3. Parse Error
 4. Fatal Error
 
-*1. Warning Error* : The main reason for warning errors is to include a missing file or passing an incorrect number of parameters in a function. A warning error is a type of error that does not stop the execution of the script.
+1. Warning Error* : The main reason for warning errors is to include a missing file or passing an incorrect number of parameters in a function. A warning error is a type of error that does not stop the execution of the script.
 ```php
-<?php
 echo "Warning Error!!";
 include("function.php");
-?>
 ```
-*2. Notice Error* : Notice error and warning error both are similar which means it does not stop the execution of the code. It occurs when you try to access an undefined variable, then it generates a notice error.
+
+2. Notice Error* : Notice error and warning error both are similar which means it does not stop the execution of the code. It occurs when you try to access an undefined variable, then it generates a notice error.
 ```php
-<?php
 $a = 10;
 echo "Notice Error !!";
 echo $b;
 echo "Below notice error";
-?>
 ```
-*3. Parse Error* : A Parse error is a type of error that you need to know about when dealing with PHP error handling best
-practices and is caused by misused or missing symbols in a syntax. A parse error is also known as a Syntax
+
+3. Parse Error* : A Parse error is a type of error that you need to know about when dealing with PHP error handling best practices and is caused by misused or missing symbols in a syntax. A parse error is also known as a Syntax
 error. Some common reasons for parse errors are:
-* Unclosed quotes/braces
-* Missing or Extra parentheses/semicolon
-* Misspellings
+   * Unclosed quotes/braces
+   * Missing or Extra parentheses/semicolon
+   * Misspellings
 ```php
-<?php
 echo "A";
 echo "B"
 echo "C";
  ```
-*4. Fatal Error* : A fatal error is another type of error that is caused due to the use of an undefined function or class. It is the type of error where the PHP compiler understands the PHP code but it recognizes an undeclared
-function. This means that function is called without the definition of the function.
-```php
-<?php
 
+4. Fatal Error* : A fatal error is another type of error that is caused due to the use of an undefined function or class. It is the type of error where the PHP compiler understands the PHP code but it recognizes an undeclared function. This means that function is called without the definition of the function.
+```php
 function message()
 {
     echo "Hello team";
@@ -1975,6 +1914,7 @@ function message()
 sms();
 echo "Fatal Error !!";
 ```
+
 ## Ways to Handle PHP Errors
 Procedural error handling in PHP can be handled in the following ways:
 1. Using die() method
@@ -1982,22 +1922,18 @@ Procedural error handling in PHP can be handled in the following ways:
 
 *1. Using die() function*
 ```php
-<?php
 $file = fopen("profile.txt", "r");
-?>
 ```
 To prevent the user from getting the error message, check whether the file exists or not before accessing it.
 ```php
-<?php
-
 if (!file_exists("profile.txt")) {
     die("File not found");
 } else {
     $file = fopen("profile.txt", "r");
     print "Open file successfully";
 }
-?>
 ```
+
 *2. Custom Error handling*
 Create a function that can be called when an error has occurred in PHP.
 ```php
@@ -2012,7 +1948,6 @@ function must be able to handle a minimum of two parameters (error level and err
 *$error_line*: Optional parameter and used to specify the line number in which error has occurred.
 *$error_context*: Optional parameter and used to specify an array containing every variable and their value when an error has occurred.
 ```php
-<?php
 function myerror($error_no, $error_msg)
 {
     echo "Error: [$error_no] $error_msg ";
@@ -2024,7 +1959,6 @@ set_error_handler("myerror"); // Setting set_error_handler
 $a = 50;
 $b = 0;
 echo ($a / $b); // This will generate error
-?>
 ```
 **Exceptions Handling**
 Exception handling is a powerful way which can handle runtime errors.
@@ -2043,8 +1977,6 @@ It is a keyword that is used to throw an exception. It also helps to list all th
 The final block contains a code, which is used for clean-up activity in PHP. It executes the essential code of
 the program.
 ```php
-<?php
-<!-- try.php -->
 try {
     $firstValue = 10;
     $secondValue = 0;
@@ -2055,22 +1987,18 @@ try {
 catch (Exception $e) {
     printf("Exception: %s", $e->getMessage());
 }
-?>
 ```
 ```php
-<?php
 session_start();
 $_SESSION["tagName"] = "PHP";
-?>
 ```
+
 **Accessing Session Variable**  
 The data is stored in a session variable, then it is in the global scope and can be accessed from any PHP file.
 ```php
-<?php
 session_start();
 $tag = $_SESSION["tagName"];
 echo "Welcome to $tag world!";
-?>
 ```
 
 # Database with MySQL
@@ -2144,7 +2072,6 @@ $dsn = "mysql:host=localhost;dbname=bookdb;charset=UTF8";
 ```
 Connecting to MySQL
 ```php
-<?php
 $dsn = "mysql:host=localhost;dbname=blog";
 $db = new PDO($dsn, 'root', '', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -2153,7 +2080,6 @@ $db = new PDO($dsn, 'root', '', [
 ```
 **Select all data from table:**
 ```php
-<?php
 $result = $db->prepare("SELECT * FROM users");
 $result->execute();
 $users = $result->fetchAll();
