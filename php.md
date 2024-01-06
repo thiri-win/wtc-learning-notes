@@ -321,7 +321,7 @@ if(condition)
 ## Summary
 * A constant is a name that holds a simple value that cannot be changed during the execution of the script. From PHP 7, a constant can hold an array.
 * A constant can be accessed from anywhere in the script.
-* Use the `define()` function or const keyword to define a constant.
+* Use the `define()` function or `const` keyword to define a constant.
 * Use the `define()` function if you want to define a constant conditionally or using an expression.
 
 # PHP Control Structure
@@ -740,7 +740,7 @@ foreach ($users as $user)
 echo $user . "<br>";
 ```
 ## PHP Array Function
-**length of an array**
+**length of an array**  
 The length of an array, i.e, the number of elements present in the array can be counted using the in-built function `count()`.
 ```php
 //Method 1 to create an array
@@ -748,14 +748,14 @@ $my_array1 = array("apple", "banana", "mango", "peach");
 //calculating length of the array
 echo "Length of the array is: " . count($my_array1);
 ```
-**array_keys() function**
+**array_keys()**  
 The array_keys() function is used to get all the keys or a subset of the keys of an array.
 ```php
 
 $array1 = array("Orange" => 100, "Apple" => 200, "Banana" => 300, "Cherry" => 400);
 print_r(array_keys($array1));
 ```
-**array_values() function**
+**array_values()**  
 array_values — Return all the values of an array
 ```php
 $array = array("size" => "XL", "color" => "gold");
@@ -770,35 +770,35 @@ print_r($Flower);
 echo "Values: ";
 print_r(array_values($Flower));
 ```
-**array_push() function**
+**array_push()**  
 array_push — Push one or more elements onto the end of array
 ```php
 $arr = ['apple', 'orange', 'mango'];
 array_push($arr, 'strawberry');
 print_r($arr);
 ```
-**array_unshift() function**
+**array_unshift()**  
 array_unshift — Prepend one or more elements to the beginning of an array
 ```php
 $arr = ['apple', 'orange', 'mango'];
 array_unshift($arr, 'watermelon');
 print_r($arr);
 ```
-**array_pop() function**
+**array_pop()**  
 array_pop — Pop the element off the end of array
 ```php
 $arr = ['apple', 'orange', 'mango'];
 array_pop($arr);
 print_r($arr);
 ```
-**array_shift() function**
+**array_shift()**  
 array_shift — Shift an element off the beginning of array
 ```php
 $arr = ['apple', 'orange', 'mango'];
 array_shift($arr);
 print_r($arr);
 ```
-*array_map()*
+**array_map()**   
 array_map — Applies the callback to the elements of the given arrays
 ```php
 $fruits = ['apple', 'orange', 'mango'];
@@ -807,7 +807,7 @@ $arrmap = array_map(function($f) {
 }, $fruits);
 print_r($arrmap);
 ```
-**list()**
+**list()**  
 list — Assign variables as if they were an array
 ```php
 $fruits = ['apple', 'orange', 'mango'];
@@ -816,7 +816,7 @@ echo $f1;
 echo $f2;
 echo $f3;
 ```
-**array_walk()**
+**array_walk()**  
 The `array_walk` is an array function provided by PHP which applies the given function to each element in the array, hence the name `array_walk`.
 ```php
 $users = ['john', 'dave', 'tim'];
@@ -852,21 +852,21 @@ lists of data.
 * PHP Functions - Returning Value
 * Setting Default Values for Passing Arguments
 * Dynamic Function Calls  
-**Advantages of PHP Function**
+## Advantages of PHP Function
 * Reusability of Code: Unlike other programming languages, PHP Functions are specified only once
 and can be called multiple times.
 * Less Code: It saves a lot of code because the logic doesn't have to be written several times. You can
 write the logic only once and reuse it by using functions.
 * Simple to Comprehend: The programming logic is separated using PHP Functions. Since every logic is
 divided into functions, it is easier to understand the application's flow.  
-**Built-in Functions in PHP**  
+## Built-in Functions in PHP 
 PHP has over 1000 built-in functions that can be called directly from within a script to perform a specific task
 in PHP Functions.  
-**PHP String Functions**  
+## PHP String Functions
 String functions are built-in language constructs and functions that are designed to manipulate and display
 strings. These functions include trimming whitespace, properly escaping strings for security, splitting strings,
 and many more.  
-**Array String Functions**  
+## Array String Functions
 **explode()**  
 The explode function splits a string by a given delimiter and returns an array with all the substrings between
 the delimiters.  
@@ -882,7 +882,7 @@ $str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
 $exploded = explode(",", $str, 5);
 print_r($exploded); //Print the array to the screen;
 ```
-**implode()**
+**implode()**  
 The implode function does the exact opposite of the explode function. It converts an array into a string, with each array element separated by a delimiter.
 ```php
 $column_heading = ['first_name', 'age', 'phone number', 'address'];
@@ -906,7 +906,7 @@ $details = [
 ];
 echo implode(',', $details);
 ```
-**str_split()**  
+**str_split()**    
 The `str_split` function takes a string to turn into an array, and splits the string into an array, with each of the characters being a separate character.
 *No length specified* :
 ```php
@@ -918,8 +918,8 @@ print_r(str_split($to_split));
 $string = "hello world how are you";
 print_r(str_split($string, 10));
 ```
-**Adding and Removing Special Characters**
-**trim()**
+**Adding and Removing Special Characters**  
+**trim()**  
 The `trim()` function removes whitespace characters from the beginning and end of a string on default settings, but can also remove other characters if specified
 ```php
 $string = "Hay Thar! ";
@@ -930,13 +930,13 @@ $string = "Hay Thar!";
 $trimmed = trim($string, "HoWdy!");
 echo $trimmed;
 ```
-**rtrim()** and **ltrim()**  
+**rtrim()** and **ltrim()**   
 These are the same as trim, except they only do it from one end. rtrim trims from the end, and ltrim trims from the beginning.
 ```php
 $string = " website";
 echo "Welcome to the " . ltrim($string);
 ```
-**addslashes**  
+**addslashes()**  
 This function takes one input string and returns a string with all of the quotation marks escaped by a slash.
 ```php
 $string = "I am about to land at O'Hare airport in Chicago, Illinois";
