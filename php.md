@@ -135,7 +135,7 @@ this means `$my_var` is different from `$MY_VAR`
 * All variables names must start with a letter follow other characters    
 `✅ $my_var1` `❌ $1my_var`
 * Variable names must not contain any spaces,  
-`❌ $first name` is not a legal variable name.
+`❌ $first name` is not a legal variable name.  
 You can instead use an underscore in place of the space `✅ $first_name`.
 * You can't use characters such as the dollar or minus sign to separate variable names.  
 `✅ $my_var;` `❌ $my var;`
