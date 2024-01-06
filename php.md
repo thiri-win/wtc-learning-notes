@@ -36,6 +36,10 @@
   - [PHP Array Function](#php-array-function)
   - [Summary](#summary-4)
 - [PHP Function](#php-function)
+  - [Advantages of PHP Function](#advantages-of-php-function)
+  - [Built-in Functions in PHP](#built-in-functions-in-php)
+  - [PHP String Functions](#php-string-functions)
+  - [Array String Functions](#array-string-functions)
   - [Manipulating Substrings](#manipulating-substrings)
   - [User Defined Functions in PHP](#user-defined-functions-in-php)
   - [Returning Values from a Function](#returning-values-from-a-function)
@@ -248,13 +252,11 @@ $x = 5.35;
 $y = (int) $x; // cast $x to integer
 var_dump($y);
 ```
-Example:
 ```php
 $x = '25';
 $y = (integer) $x; // cast $x to int
 var_dump($y);
 ```
-Example:
 ```php
 $string = '10 Animals';
 $numberOfAnimals = (int) $string;
@@ -283,13 +285,12 @@ var_dump($d);
 * Logical operators are used to compare conditions or values
 
 # PHP Constant
-**Define constant** – A constant is a variable whose value cannot be changed at runtime. To define a constant, you use the `define()` function. The `define()` function takes the constant’s name as the first argument and the constant value as the second argument. For example:
+**Define constant** – A constant is a variable whose value cannot be changed at runtime. To define a constant, you use the `define()` function. The `define()` function takes the constant’s name as the first argument and the constant value as the second argument.
 ```php
-
 define('WIDTH','1140px');
 echo WIDTH;
 ```
-constant names are uppercase. Unlike a variable, the constant name doesn’t start with the dollar sign(`$`). a constant can hold a simple value like a number, a string, a boolean value. From PHP 7.0, a constant can hold an array. For example:
+constant names are uppercase. Unlike a variable, the constant name doesn’t start with the dollar sign(`$`). a constant can hold a simple value like a number, a string, a boolean value. From PHP 7.0, a constant can hold an array.
 ```php
 define( 'ORIGIN', [0, 0] );
 ```
@@ -329,13 +330,11 @@ if(condition)
 ## Conditional Statements
 Conditional Statements allow you to branch the path of execution in a script based on whether a single, or multiple conditions, evaluate to true or false.  
 **If Statements**  
-Example:
 ```php
 $x=1;
 if ($x == 1)
 print '$x is equal to 1';
 ```
-Example:
 ```php
 $age = 50;
 if ($age > 30)
@@ -344,7 +343,6 @@ if ($age > 30)
 }
 ```
 **Else Statements**  
-Example:
 ```php
 $x=1;
 if ($x == 2) {
@@ -353,7 +351,6 @@ if ($x == 2) {
     print 'x is equal to 1';
 }
 ```
-Example:
 ```php
 $age = 50;
 if ($age < 30){
@@ -372,7 +369,6 @@ $x++;
     print 'now x is equal to 2';
 }
 ```
-Example:
 ```php
 $year = 2014; // Leap years are divisible by 400 or by 4 but not 100
 if(($year % 400 == 0) || (($year % 100 != 0) && ($year % 4 == 0))){
@@ -432,7 +428,6 @@ $x = 1;
 Loops in PHP are useful when you want to execute a piece of code repeatedly until a condition evaluates to false.  
 Code is executed repeatedly as long as a condition evaluates to true, and as soon as the condition evaluates to false, the script continues executing the code after the loop.
 **While Loops**
-Example:
 ```php
 $x=1;
 while ($x <=10){
@@ -440,7 +435,6 @@ while ($x <=10){
     $x++;
 }
 ```
-Example:
 ```php
 $max = 0;
 echo $i = 0;
@@ -458,7 +452,6 @@ while ($max < 10) {
 }
 ```
 **Do…While Loops**  
-Example:
 ```php
 $x = 11;
 do {
@@ -466,7 +459,6 @@ do {
     $x++;
 } while ($x <= 10);
 ```
-Example:
 ```php
 $i = 1;
 $sum = 0;
@@ -476,7 +468,6 @@ do {
 } while ($i <= 5);
 echo "The Sum of 1 to 5 = " . $sum;
 ```
-Example:
 ```php
 $even = "";
 $odd = "";
@@ -496,13 +487,11 @@ echo "The Odd no = " . $odd;
 // The Odd no = 1 3 5 7 9 11 13 15 17 19
 ```
 **For Loops**
-Example:
 ```php
 for ($x = 1; $x <= 10; $x++) {
     print $x . "<br>";
 }
 ```
-Example:
 ```php
 $d = 0;
 $e = 0;
@@ -512,7 +501,6 @@ for ($i = 0; $i < 5; $i++) {
 }
 echo ("At the end of the loop d = $d and e = $e");
 ```
-Example;
 ```php
 echo "List of the Natural Numbers between 1-30 :: ";
 $j = 0;
@@ -525,7 +513,6 @@ echo "Sum of all the natural numbers between 1-30 :: ";
 echo $j;
 echo "<br>";
 ```
-Example:
 ```php
 $brush_price = 5;
 echo "<table border=\"1\" align=\"center\">";
@@ -621,7 +608,6 @@ The keys are well defined with respect to the data that index holds as shown in 
 ```php
 $ages = array("Zaid" => 26, "Ali" => 30, "John" => 28, "Cris" => 28, "Clark" => 28);
 ```
-Example:
 ```php
 $movie = array(
     0 => "Shaolin Monk",
@@ -632,14 +618,12 @@ $movie = array(
 );
 echo $movie[4];
 ```
-Example:
 ```php
 $persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");
 print_r($persons);
 echo "";
 echo "Mary is a " . $persons["Mary"];
 ```
-Example:
 ```php
 // Associative array
 $person_weight = array(
@@ -666,7 +650,6 @@ $movies = array(
 );
 print_r($movies);
 ```
-Example:
 ```php
 //column Multi D Array
 $a[0][0] = "value0";
@@ -686,7 +669,6 @@ for ($b = 0; $b < count($a); $b++) {
     }
 }
 ```
-Example:
 ```php
 //Row Multi D Array
 $name = array(
@@ -701,7 +683,6 @@ for ($e = 0; $e < count($name); $e++) {
     }
 }
 ```
-Example:
 ```php
 $d = array(
 "sunday" => array("cost", "first", 10),
@@ -715,7 +696,6 @@ foreach ($d as $e) {
     echo "<br>";
 }
 ```
-Example:
 ```php
 $my_array1 = array("apple", "banana", "mango", "peach");
 echo $my_array1[0] . "<br>";
@@ -725,7 +705,6 @@ echo $my_array1[4] . "<br>";
 for ($i = 0; $i < count($my_array1); $i++)
 echo $my_array1[$i] . "<br>";
 ```
-Example:
 ```php
 
     $users = ['john', 'dave', 'tim'];
@@ -733,7 +712,6 @@ Example:
     echo $users[$i] . "<br>";
 ?>
 ```
-Example:
 ```php
 $users = ['john', 'dave', 'tim'];
 foreach ($users as $user)
@@ -761,7 +739,6 @@ array_values — Return all the values of an array
 $array = array("size" => "XL", "color" => "gold");
 print_r(array_values($array));
 ```
-Example:
 ```php
 $Flower = array('flower1' => null, 'flower2' => null, 'flower3' => null, 'flower4' => null);
 echo "Actual Array: ";
@@ -826,7 +803,6 @@ function print_item($item, $key)
 }
 array_walk($users, 'print_item');
 ```
-Example:
 ```php
 function myfunction($value, $key) {
     $value = "yellow";
@@ -889,7 +865,6 @@ $column_heading = ['first_name', 'age', 'phone number', 'address'];
 $sample_header = implode('; ', $column_heading);
 echo $sample_header;
 ```
-Example:
 ```php
 $trial = array('This', 'is', 'PHP', 'simplified');
 echo implode("|", $trial);
@@ -897,7 +872,6 @@ echo implode("*", $trial);
 echo implode("+", $trial);
 echo implode("_", $trial);
 ```
-Example:
 ```php
 $details = [
     'company_name' => 'Frank',
@@ -998,14 +972,12 @@ echo "The character L is found at character $location in $haystack";
 ```
 **strstr()**  
 `strstr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for  
-Example:
 ```php
 $haystack = "foo@bar.com";
 echo $haystack . "<br>";
 $domain = strstr($haystack, "@");
 echo $domain;
 ```
-Example:
 ```php
 $haystack = "foo@bar.com";
 echo $haystack . "<br>";
@@ -1074,7 +1046,6 @@ function call() {
 call(); // calling function
 ?>
 ```
-Example:
 ```php
 function whatIsToday()
 {
@@ -1186,7 +1157,6 @@ selfMultiply($mynum);
 echo $mynum; // Outputs: 25
 ```
 ## Understanding the Variable Scope
-Example:
 ```php
 <?php
 function test() {
@@ -1196,7 +1166,6 @@ function test() {
 test(); // Outputs: Hello World!
 echo $greet; // Generate undefined variable error
 ```
-Example:
 ```php
 $greet = "Hello World!";
 // Defining function
