@@ -130,12 +130,15 @@ A local variable is only accessible to the script that it was defined in.
 * All variable names must start with the dollar sign.  
 `$my_var`
 * Variable names are case sensitive;   
-this means `$my_var` is different from `$MY_VAR`  
+this means `$my_var` is different from `$MY_VAR`    
 `$my_var != $MY_VAR`
-* All variables names must start with a letter follow other characters  
+* All variables names must start with a letter follow other characters    
 `✅ $my_var1` `❌ $1my_var`
-* Variable names must not contain any spaces, `❌ $first name` is not a legal variable name. You can instead use an underscore in place of the space `✅ $first_name`.
-* You can't use characters such as the dollar or minus sign to separate variable names. `✅ $my_var;` `❌ $my var;`
+* Variable names must not contain any spaces,  
+`❌ $first name` is not a legal variable name.
+You can instead use an underscore in place of the space `✅ $first_name`.
+* You can't use characters such as the dollar or minus sign to separate variable names.  
+`✅ $my_var;` `❌ $my var;`
 ```php
 <?php
 $my_var = 1;
