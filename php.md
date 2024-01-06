@@ -28,7 +28,7 @@
   - [Summary](#summary-3)
 - [PHP Array](#php-array)
   - [Types of Arrays in PHP](#types-of-arrays-in-php)
-    - [Initialization an Array](#initialization-an-array)
+  - [Initialization an Array](#initialization-an-array)
   - [Numeric Arrays](#numeric-arrays)
   - [Array Elements](#array-elements)
   - [Associative Arrays](#associative-arrays)
@@ -567,7 +567,7 @@ There are three kinds of arrays that you can make. These are listed below.
 2. Associative arrays – Arrays with named keys
 3. Multidimensional arrays – Arrays containing one or more arrays  
 
-### Initialization an Array
+## Initialization an Array
 ```php
 $array = array();
 $array = [];
