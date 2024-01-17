@@ -47,8 +47,8 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 
 Ref: [More Info at developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 
-|Pseudo Class|Explanation|
-|------------|-----------|
+|Pseudo Class  |Explanation|
+|:-------------|-----------|
 |:active       |commonly used on `<a>` and `<btton>` elements.|
 |:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), or option (`<option>`) element that is checked or toggled to an on state.|
 |:hover        |triggered when the user hovers over an element with the cursor (mouse pointer).|
