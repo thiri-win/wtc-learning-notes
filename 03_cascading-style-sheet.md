@@ -47,18 +47,32 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 
 Ref: [More Info at developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 
-|Pseudo Class  |Explanation|
-|:-------------|-----------|
-|:active       |commonly used on `<a>` and `<btton>` elements.|
-|:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), or option (`<option>`) element that is checked or toggled to an on state.|
-|:hover        |triggered when the user hovers over an element with the cursor (mouse pointer).|
-|:focus        |represents an element (such as a form input) that has received focus.|
-|:first-child  |represents the first element among a group of sibling elements.|
-|:last-child   |represents the last element among a group of sibling elements.|
-|:nth-child    |matches elements based on their position among a group of siblings.|
+|Pseudo Class  |Explanation                                                                         |
+|--------------|------------------------------------------------------------------------------------|
+|:active       |commonly used on `<a>` and `<btton>` elements.                                      |
+|--------------|------------------------------------------------------------------------------------|
+|:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), | 
+|              |or option (`<option>`) element that is checked or toggled to an on state.           |
+|--------------|------------------------------------------------------------------------------------|
+|:hover        |triggered when the user hovers over an element with the cursor (mouse pointer).     |
+|--------------|------------------------------------------------------------------------------------|
+|:focus        |represents an element (such as a form input) that has received focus.               |
+|--------------|------------------------------------------------------------------------------------|
+|:first-child  |represents the first element among a group of sibling elements.                     |
+|--------------|------------------------------------------------------------------------------------|
+|:last-child   |represents the last element among a group of sibling elements.                      |
+|--------------|------------------------------------------------------------------------------------|
+|:nth-child    |matches elements based on their position among a group of siblings.                 |
+|--------------|------------------------------------------------------------------------------------|
 |:nth-of-type()|matches elements based on their position among siblings of the same type (tag name).|
-|:visited      |applies once the link has been visited by the user.applies only `<a>` and `<area>` elements that have an href attribute.|
-|:root         |matches the root element of a tree representing the document.In HTML, :root represents the `<html>` element and is identical to the selector html, except that its specificity is higher.|
+|--------------|----------------------------------------------------------------------------------- |
+|:visited      |applies once the link has been visited by the user.applies only `<a>` and `<area>`  |
+|              |elements that have an href attribute.                                               |
+|--------------|------------------------------------------------------------------------------------|
+|:root         |matches the root element of a tree representing the document.In HTML, :root         |
+|              |represents the `<html>` element and is identical to the selector html, except that  |
+|              |its specificity is higher.                                                          |
+|--------------|------------------------------------------------------------------------------------|
 
 Pseudo Element
 ==============
