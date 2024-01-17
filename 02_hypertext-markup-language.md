@@ -80,7 +80,7 @@ HTML tags are like keywords which defines that how web browser will format and d
 |`<sup>superscript</sup> text`|This is <sup>superscript</sup> text|
 |`<abbr>abbreviation tag</abbr>`|<abbr>abbreviation tag</abbr>|
 |`<dfn>definition tag</dfn>`|<dfn>definition tag</dfn>|
-|`<blockquote>quoting tag</blockquote>`|> quoting tag|
+|`<blockquote>quoting tag</blockquote>`| <blockquote>quoting tag</blockquote>|
 |`<q>short quote tag</q>`|<q>short quote tag</q>|
 |`<code>code tag</code>`|`code tag`|
 |`<kbd>keyboard tag</kbd>`|<kbd>keyboard tag</kbd>|
