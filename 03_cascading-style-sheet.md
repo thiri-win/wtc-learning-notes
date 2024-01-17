@@ -47,48 +47,18 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 
 Ref: [More Info at developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 
-|  Sequence   | Result                                                        |
-|-------------|---------------------------------------------------------------|
-| `a?c`       | Matches `abc`, `axc`, and `aac`. Does not match `ac`, `abbc`, | 
-|             | or `a/c`.                                                     |
-|-------------|---------------------------------------------------------------|
-| `a*c`       | Matches "ac", "abc" and "azzzzzzzc". Does not match "a/c".    |
-|-------------|---------------------------------------------------------------|
-| `foo...bar` | Matches "foobar", "fooxbar", and "fooz/blaz/rebar". Does not  |
-|             | match "fo/obar", "fobar" or "food/bark".                      |
-|-------------|---------------------------------------------------------------|
-| `....obj`   | Matches all files anywhere in the current hierarchy that end  |
-|             | in ".obj". Note that the first three periods are interpreted  |
-|             | as "...", and the fourth one is interpreted as a literal "."  |
-|             | character.                                                    |
-|-------------|---------------------------------------------------------------|
-
 |Pseudo Class  |Explanation                                                                         |
 |--------------|------------------------------------------------------------------------------------|
 |:active       |commonly used on `<a>` and `<btton>` elements.                                      |
-|--------------|------------------------------------------------------------------------------------|
-|:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), | 
-|              |or option (`<option>`) element that is checked or toggled to an on state.           |
-|--------------|------------------------------------------------------------------------------------|
+|:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`),or option (`<option>`) element that is checked or toggled to an on state.|
 |:hover        |triggered when the user hovers over an element with the cursor (mouse pointer).     |
-|--------------|------------------------------------------------------------------------------------|
 |:focus        |represents an element (such as a form input) that has received focus.               |
-|--------------|------------------------------------------------------------------------------------|
 |:first-child  |represents the first element among a group of sibling elements.                     |
-|--------------|------------------------------------------------------------------------------------|
 |:last-child   |represents the last element among a group of sibling elements.                      |
-|--------------|------------------------------------------------------------------------------------|
 |:nth-child    |matches elements based on their position among a group of siblings.                 |
-|--------------|------------------------------------------------------------------------------------|
 |:nth-of-type()|matches elements based on their position among siblings of the same type (tag name).|
-|--------------|----------------------------------------------------------------------------------- |
-|:visited      |applies once the link has been visited by the user.applies only `<a>` and `<area>`  |
-|              |elements that have an href attribute.                                               |
-|--------------|------------------------------------------------------------------------------------|
-|:root         |matches the root element of a tree representing the document.In HTML, :root         |
-|              |represents the `<html>` element and is identical to the selector html, except that  |
-|              |its specificity is higher.                                                          |
-|--------------|------------------------------------------------------------------------------------|
+|:visited      |applies once the link has been visited by the user.applies only `<a>` and `<area>` elements that have an href attribute.|
+|:root         |matches the root element of a tree representing the document.In HTML, :root represents the `<html>` element and is identical to the selector html, except that its specificity is higher.|
 
 Pseudo Element
 ==============
