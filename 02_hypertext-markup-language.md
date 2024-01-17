@@ -56,9 +56,9 @@ HTML - Paragraph
 
 HTML paragraph or HTML `p` tag is used to define a paragraph in a webpage. Let's take a simple example to see how it work. It is a notable point that a browser itself add an empty line before and after a paragraph. An HTML `<p>` tag indicates starting of new paragraph.
 
-`<p>This is the first paragph.</p>` 
-`<p>This is the second paragph.</p>` 
-`<p>This is the third paragph.</p>`
+`<p>This is the first paragph.</p>`  
+`<p>This is the second paragph.</p>`   
+`<p>This is the third paragph.</p>`  
 
 HTML - Tags
 ===========
