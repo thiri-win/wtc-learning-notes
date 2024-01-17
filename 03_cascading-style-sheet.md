@@ -47,6 +47,22 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 
 Ref: [More Info at developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 
+|  Sequence   | Result                                                        |
+|-------------|---------------------------------------------------------------|
+| `a?c`       | Matches `abc`, `axc`, and `aac`. Does not match `ac`, `abbc`, | 
+|             | or `a/c`.                                                     |
+|-------------|---------------------------------------------------------------|
+| `a*c`       | Matches "ac", "abc" and "azzzzzzzc". Does not match "a/c".    |
+|-------------|---------------------------------------------------------------|
+| `foo...bar` | Matches "foobar", "fooxbar", and "fooz/blaz/rebar". Does not  |
+|             | match "fo/obar", "fobar" or "food/bark".                      |
+|-------------|---------------------------------------------------------------|
+| `....obj`   | Matches all files anywhere in the current hierarchy that end  |
+|             | in ".obj". Note that the first three periods are interpreted  |
+|             | as "...", and the fourth one is interpreted as a literal "."  |
+|             | character.                                                    |
+|-------------|---------------------------------------------------------------|
+
 |Pseudo Class  |Explanation                                                                         |
 |--------------|------------------------------------------------------------------------------------|
 |:active       |commonly used on `<a>` and `<btton>` elements.                                      |
