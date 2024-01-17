@@ -218,7 +218,7 @@ The HTML form element is used to create HTML Form
 |attribute|description|
 |---|---|
 |action|`action(<form action=”login.php”></form>)`|
-|target|`_blank(<form action=”login.php” target=”_blank”></form>)`<br>`_blank(<form action=”login.php” target=”_self”></form>)`<br>`_blank(<form action=”login.php” target=”_parent”></form>)`<br>`_blank(<form action=”login¬¬.php” target=”_top”></form>)`|
+|target|`_blank(<form action=”login.php” target=”_blank”></form>)`<br>`_blank(<form action=”login.php” target=”_self”></form>)`<br>`_blank(<form action=”login.php” target=”_parent”></form>)`<br>`_blank(<form action=”login.php” target=”_top”></form>)`|
 |method|`<form action=”login.php” method=”get”></form>`<br>`<form action=”login.php” method=”post”></form>`|
 |autocomplete|`<form action=”login.php” autocomplete=”on”></form>`<br>`<form action=”login.php” autocomplete=”off”></form>`|
 
@@ -355,5 +355,7 @@ Forms - Fieldset and Legend
     <input type="text" placeholder="Enter Your Name">
 </fieldset>
 ```
+
+all html elements tag => [click for more elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
                                     
