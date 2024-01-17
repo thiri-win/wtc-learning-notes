@@ -1,94 +1,3 @@
-- [What is CSS?](#what-is-css)
-- [How to link CSS?](#how-to-link-css)
-  - [External Link](#external-link)
-  - [Internal Link](#internal-link)
-  - [Inline Attribute](#inline-attribute)
-- [CSS Selector](#css-selector)
-- [Pseudo Class](#pseudo-class)
-- [Pseudo Element](#pseudo-element)
-- [color](#color)
-- [border](#border)
-- [outline](#outline)
-- [width](#width)
-- [max-width](#max-width)
-- [min-width](#min-width)
-- [height](#height)
-- [max-height](#max-height)
-- [min-height](#min-height)
-- [text-align](#text-align)
-- [text-align-last](#text-align-last)
-- [text-decoration](#text-decoration)
-- [text-decoration-color](#text-decoration-color)
-- [text-decoration-line](#text-decoration-line)
-- [text-decoration-style](#text-decoration-style)
-- [text-decoration-thickness](#text-decoration-thickness)
-- [text-indent](#text-indent)
-- [text-shadow](#text-shadow)
-- [text-transform](#text-transform)
-- [letter-spacing](#letter-spacing)
-- [word-spacing](#word-spacing)
-- [cursor](#cursor)
-- [list-style](#list-style)
-- [list-style-position](#list-style-position)
-- [list-style-image](#list-style-image)
-- [list-style-type](#list-style-type)
-- [background](#background)
-- [background-attachment](#background-attachment)
-- [background-blend-mode](#background-blend-mode)
-- [background-clip](#background-clip)
-- [background-color](#background-color)
-- [background-image](#background-image)
-- [background-position](#background-position)
-- [background-repeat](#background-repeat)
-- [background-size](#background-size)
-- [CSS values and units](#css-values-and-units)
-- [font](#font)
-- [font-family](#font-family)
-- [font-size](#font-size)
-- [font-style](#font-style)
-- [font-weight](#font-weight)
-- [padding](#padding)
-- [margin](#margin)
-- [box-sizing](#box-sizing)
-- [box-model](#box-model)
-- [opacity](#opacity)
-- [transform](#transform)
-- [transition](#transition)
-- [float](#float)
-- [position](#position)
-- [z-index](#z-index)
-- [animation](#animation)
-- [animation-composition](#animation-composition)
-- [animation-delay](#animation-delay)
-- [animation-direction](#animation-direction)
-- [animation-duration](#animation-duration)
-- [animation-fill-mode](#animation-fill-mode)
-- [animation-iteration-count](#animation-iteration-count)
-- [animation-name](#animation-name)
-- [animation-play-state](#animation-play-state)
-- [animation-timing-function](#animation-timing-function)
-- [display](#display)
-- [flex](#flex)
-- [flex-basis](#flex-basis)
-- [flex-direction](#flex-direction)
-- [flex-flow](#flex-flow)
-- [flex-grow](#flex-grow)
-- [flex-shrink](#flex-shrink)
-- [flex-wrap](#flex-wrap)
-- [justify-content](#justify-content)
-- [justify-items](#justify-items)
-- [justify-self](#justify-self)
-- [align-items](#align-items)
-- [align-content](#align-content)
-- [align-self](#align-self)
-- [grid](#grid)
-- [grid-template-rows](#grid-template-rows)
-- [grid-template-columns](#grid-template-columns)
-- [grid-template](#grid-template)
-- [Responsive Web Design](#responsive-web-design)
-- [Media Queries](#media-queries)
-- [The viewport meta tag](#the-viewport-meta-tag)
-
 What is CSS?
 ============
 *   used to make web pages presentable.
@@ -140,16 +49,16 @@ Ref: [More Info at developer.mozilla.org](https://developer.mozilla.org/en-US/do
 
 |Pseudo Class|Explanation|
 |------------|-----------|
-|:active|commonly used on `<a>` and `<btton>` elements.|
-|:checked|represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), or option (`<option>`) element that is checked or toggled to an on state.|
-|:hover|triggered when the user hovers over an element with the cursor (mouse pointer).|
-|:focus|represents an element (such as a form input) that has received focus.|
-|:first-child|represents the first element among a group of sibling elements.|
-|:last-child|represents the last element among a group of sibling elements.|
-|:nth-child|matches elements based on their position among a group of siblings.|
+|:active       |commonly used on `<a>` and `<btton>` elements.|
+|:checked      |represents any radio(`<input type=”radio”>`), checkbox (`<input type=”checkbox”>`), or option (`<option>`) element that is checked or toggled to an on state.|
+|:hover        |triggered when the user hovers over an element with the cursor (mouse pointer).|
+|:focus        |represents an element (such as a form input) that has received focus.|
+|:first-child  |represents the first element among a group of sibling elements.|
+|:last-child   |represents the last element among a group of sibling elements.|
+|:nth-child    |matches elements based on their position among a group of siblings.|
 |:nth-of-type()|matches elements based on their position among siblings of the same type (tag name).|
-|:visited|applies once the link has been visited by the user.applies only `<a>` and `<area>` elements that have an href attribute.|
-|:root|matches the root element of a tree representing the document.In HTML, :root represents the `<html>` element and is identical to the selector html, except that its specificity is higher.|
+|:visited      |applies once the link has been visited by the user.applies only `<a>` and `<area>` elements that have an href attribute.|
+|:root         |matches the root element of a tree representing the document.In HTML, :root represents the `<html>` element and is identical to the selector html, except that its specificity is higher.|
 
 Pseudo Element
 ==============
