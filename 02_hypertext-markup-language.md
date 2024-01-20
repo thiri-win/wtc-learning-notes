@@ -1,29 +1,3 @@
-- [What is Hyper Text Markup Language?](#what-is-hyper-text-markup-language)
-- [HTML Basic](#html-basic)
-- [HTML - Heading](#html---heading)
-- [HTML - Paragraph](#html---paragraph)
-- [HTML - Tags](#html---tags)
-- [HTML - Text Links](#html---text-links)
-- [HTML - The target Attribute](#html---the-target-attribute)
-- [HTML - Images](#html---images)
-- [HTML - Lists](#html---lists)
-  - [Unordered List](#unordered-list)
-  - [Ordered List](#ordered-list)
-- [HTML - Media](#html---media)
-  - [Video](#video)
-  - [Audio](#audio)
-  - [Youtube Video](#youtube-video)
-- [HTML - Tables](#html---tables)
-- [HTML - Forms](#html---forms)
-  - [Forms - Input Elements](#forms---input-elements)
-  - [Forms - Input Elements Attribute](#forms---input-elements-attribute)
-  - [Forms - Label Element](#forms---label-element)
-  - [Forms - Select Element](#forms---select-element)
-  - [Forms - Textarea Element](#forms---textarea-element)
-  - [Forms - Button Element](#forms---button-element)
-  - [Forms - Fieldset and Legend](#forms---fieldset-and-legend)
-
-
 What is Hyper Text Markup Language?
 ===================================
 
