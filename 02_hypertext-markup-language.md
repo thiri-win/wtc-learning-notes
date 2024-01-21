@@ -332,4 +332,5 @@ Forms - Fieldset and Legend
 
 all html elements tag => [click for more elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
+[html exercise portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/01_html-exercies-1.html)
                                     
