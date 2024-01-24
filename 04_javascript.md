@@ -11,51 +11,52 @@ Operator
 
 Arithmetic Operator
 -------------------
-|operator|description|
-|--------|-----------|
-|+|addition|
-|\-|substraction|
-|\*|multiplication|
-|/|division|
-|%|modulus|
-|++|increment|
-|\--|decrement|
+| operator | name           | example             | output |
+| :------- | :------------- | :------------------ | :----- |
+| +        | addition       | 3 + 2               | 3      |
+| \-       | substraction   | 3 - 2               | 1      |
+| \*       | multiplication | 3 * 2               | 6      |
+| /        | division       | 3 / 2               | 1.5    |
+| %        | modulus        | 3 % 2               | 1      |
+| ++       | increment      | let a = 3 <br> a ++ | 4      |
+| \--      | decrement      | let a = 3 <br> a -- | 2      |
 
 Comparison Operator
 -------------------
-|operator|description|
-|--------|-----------|
-|\==|equal|
-|!=|not equal|
-|\>|greater than|
-|<|less than|
-|\>=|greater than or equal|
-|<=|less than or equal|
+| operator | name                  | example   | output |
+| :------- | :-------------------- | :-------- | :----- |
+| \==      | equal                 | 3 == '3'  | true   |
+| \===     | identical             | 3 === '3' | false  |
+| !=       | not equal             | 3 != 5    | true   |
+| \>       | greater than          | 5 > 3     | true   |
+| <        | less than             | 7 < 10    | true   |
+| \>=      | greater than or equal | 5 >= 5    | true   |
+| <=       | less than or equal    | 8 <= 6    | false  |
 
 logical operator
 ----------------
-|operator|description|
-|--------|-----------|
-|&&|and|
-|\|\||or|
-|!|not|
+| operator | name | example         | output |
+| :------- | :--- | :-------------- | :----- |
+| &&       | and  | 3 > 1 && 1 <= 5 | true   |
+| \|\|     | or   | 3 > 1 && 1 >= 5 | false  |
+| !        | not  | ! 3 > 1         | false  |
 
 Assignment Operator
 -------------------
-|operator|description|
-|--------|-----------|
-|\=|assignment|
-|+=|add and assign|
-|\-=|substract and assign|
-|\*=|multiplication and assign|
-|/=|divide and assign|
-|%=|modulus and assign|
+| operator | description               | example |
+| :------- | :------------------------ | :------ |
+| \=       | assignment                | a = 1   |
+| +=       | add and assign            | a += 2  |
+| \-=      | substract and assign      | a -= 2  |
+| \*=      | multiplication and assign | a *= 3  |
+| /=       | divide and assign         | a /= 2  |
+| %=       | modulus and assign        | a %= 3  |
 
 conditional operator
 --------------------
-|operator|description|
-|--------|-----------|
-|? :|conditional|
+| operator | description | example                              |
+| :------- | :---------- | :----------------------------------- |
+| ? :      | conditional | (condition) ? (if true) : (if false) |
 
 Control Flow
 ============
@@ -200,16 +201,16 @@ JavaScript is a dynamically typed language. It means that a variable doesn't ass
 primitive data types:
 ---------------------
 
-*   number
-*   boolean
+*   [number](#number)
+*   [boolean](#boolean)
 *   undefined
 *   null
-*   string
+*   [string](#string)
 
 complex data types:
 -------------------
 
-*   object
+*   [object](#objects)
 
 Number
 ======
@@ -245,6 +246,8 @@ Number
 *   JavaScript allows you to use numeric separators for both integer and floating-point numbers.
 *   Use underscores (\_) as the numeric separators to create a visual separation between groups of digits.
 
+[number properties & methods](pages/04_js-number.md)   
+
 Boolean
 =======
 
@@ -261,6 +264,7 @@ console.log(typeof(a)); // boolean
 let b = new Boolean(false);
 console.log(b.valueOf()); //false
 ```
+[boolean properties & methods](pages/04_js-boolean.md)
 
 String
 ======
@@ -312,36 +316,7 @@ console.log(result); // true
 let result = 'a' < 'B';
 console.log(result); // false
 ``` 
-<!-- String Properties
------------------
-
-*   string.length
-*   string\[0\]
-
-String Methods
---------------
-
-*   charAt()
-*   concat()
-*   indexOf()
-*   lastIndexOf()
-*   match()
-*   search()
-*   slice()
-*   split()
-*   substr()
-*   substring()
-*   toLowerCase()
-*   toUpperCase()
-*   valueOf()
-*   trim()
-*   trimStart()
-*   trimEnd()
-*   replace()
-*   replaceAll()
-*   startsWith()
-*   endsWith()
-*   toString(): Note that the toString() method doesn't work for undefined and null. -->
+[string properties & methods](pages/04_js-string.md)
 
 Objects
 =======
@@ -531,6 +506,8 @@ const odd = [1, 3, 5];
 const combined = [...odd, 2, 4, 6];
 console.log(combined); // [1, 3, 5, 2, 4, 6];
 ```
+
+[array properties & methods](pages/04_js-array.md)
 
 Document Object Model
 =====================
