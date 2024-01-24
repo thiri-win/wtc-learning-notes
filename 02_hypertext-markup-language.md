@@ -332,7 +332,7 @@ Forms - Fieldset and Legend
 
 all html elements tag => [click for more elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-**HTML Exercises**
+# HTML Exercises
 * [portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/01_html-portfolio-1.html)
 * [portfolio - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/02_html-portfolio-2.html)
 * [travel agency](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/03_html-travel.html)
