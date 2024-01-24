@@ -332,6 +332,13 @@ Forms - Fieldset and Legend
 
 all html elements tag => [click for more elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-![sample](images/html-eg-1.png)
-[html exercise portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/01_html-exercies-1.html)
+**HTML Exercises**
+* [portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/01_html-portfolio-1.html)
+* [portfolio - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/02_html-portfolio-2.html)
+* [travel agency](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/03_html-travel.html)
+* [table - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/04_html-table-1.html)
+* [table - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/05_html-table-2.html)
+* [form - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/06_html-form-1.html)
+* [form - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/07_html-form-2.html)
+
 
