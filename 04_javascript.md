@@ -35,11 +35,11 @@ Comparison Operator
 
 logical operator
 ----------------
-| operator | name | example         | output |
-| :------- | :--- | :-------------- | :----- |
-| &&       | and  | 3 > 1 && 1 <= 5 | true   |
-| \|\|     | or   | 3 > 1 && 1 >= 5 | false  |
-| !        | not  | ! 3 > 1         | false  |
+| operator | name | example           | output |
+| :------- | :--- | :---------------- | :----- |
+| &&       | and  | 3 > 1 && 1 <= 5   | true   |
+| \|\|     | or   | 3 > 1 \|\| 1 >= 5 | false  |
+| !        | not  | ! 3 > 1           | false  |
 
 Assignment Operator
 -------------------
@@ -241,6 +241,10 @@ Number
 *   toPrecision()
 *   toString()
 *   valueOf()
+*   Number Properties Cannot be Used on Variables
+*   Number properties belong to the JavaScript Number Object.
+*   These properties can only be accessed as Number.MAX_VALUE.
+*   Using x.MAX_VALUE, where x is a variable or a value, will return undefined:
 *   numeric separator: The numeric separator allows you to create a visual separation between groups of digits by using underscores (\_) as separators.
 *   const amount = 1\_000\_000\_000;
 *   JavaScript allows you to use numeric separators for both integer and floating-point numbers.

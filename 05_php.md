@@ -1386,71 +1386,87 @@ The PHP Object-Oriented Programming concepts are:
 * Inheritance
 * Interface
 * Abstraction
+
 ## Class & Object
-Class is a programmer-defined data type, which includes local methods and local variables. Class is also a collection of objects. Object has properties and behavior.
-## Creating Objects in PHP
-When class is created, we can create any number of objects in that class. The object is created with the help of the new keyword.
-## Calling Member Function
-When the object is created, we can access the variables and method function of the class with the help of operator ‘->, accessing the method is done to get the information of that method.
+Class is a programmer-defined data type, which includes local methods and local variables. Class is also a collection of objects. Object has properties and behavior.  
+You can define a **class** like this:  
+```php
+<?php
+
+class ClassName
+{
+    //
+}
+
+```
+
+### Creating Objects in PHP
+When class is created, we can create any number of objects in that class. The object is created with the help of the new keyword.  
+The process of creating a new object is also called instantiation.  
+You can create a new **object** like this:
+```php
+<?php
+
+class People
+{
+
+}
+$person = new People();
+```
+
+### Add properties to class
+add properties to class :
+```php
+<?php
+
+class People
+{
+    public name;
+    public age;
+}
+```
+
+### Accessing properties in class
+```php
+<?php
+
+$object->property;
+
+```
+
+### Adding methods to class
+```php
+<?php
+
+class People
+{
+    public function walk()
+    {
+
+    }
+}
+
+```
+
+### Calling methods of a class
+When the object is created, we can access the variables and method function of the class with the help of operator `->`.  
 ```php
 // classs with properties and method
 class Car
 {
-    public $make;
     public function color()
     {
-        return "$this->make has white color";
+        return "This car is white";
     }
 }
-```
-```php
+
 // instantiate a Class
 $nissan = new Car;
-$nissan->make = "Nissan";
 echo $nissan->color();
 ```
 
-## Constructor And Destructor
-PHP constructor function is called when the object is created.  
-The magic method `__construct()` is known as a constructor that is automatically called whenever a new object is created.  
-keep in mind that the construct function starts with two underscores (`__`).
-```php
-// classes with constructor method
-class Car
-{
-    public $brand;
-    public function __construct($brand)
-    {
-        $this->brand = $brand;
-    }
-    public function color()
-    {
-        return "$this->brand is white color";
-    }
-}
-$kia = new Car("KIA");
-$kia->color();
-```
-`__destruct()` method is executed automatically when the object is destroyed.  
-keep in mind that the destructor function starts with two underscores (`__`).
-```php
-<?php
-class House
-{
-    public $name;
-    public $color;
-    public function __construct($name, $color)
-    {
-        $this->name = $name;
-        $this->color = $color;
-    }
-    public function __destruct()
-    {
-        echo "The color of the {$this->name} is {$this->color}";
-    }
-}
-$blackHouse = new House("John's House", "black");
-```
+### $this
+`$this` သည် ယခုလက်ရှိ class ကိုရည်ညွှန်းခြင်းဖြစ်ပါသည်။
 
 ## Access Modifiers
 PHP supports various keywords to make any variable to access any variable and the identifiers.  
@@ -1462,14 +1478,14 @@ Assign these keywords to the class, function or identifiers.
 * Final
 Can use these access modifiers as per our business need to grant permission or revoke permission throughout the program or the application.  
 
-|Access Modifier|Class Level|Function Level|Variable Level|
-|---------------|-----------|--------------|--------------|
-|public|NA|YES|YES|
-|private|NA|YES|YES|
-|protected|NA|YES|YES|
-|abstract|YES|YES|NA|
-|final|YES|YES|NA|
-|static|NA|YES|YES|
+| Access Modifier | Class Level | Function Level | Variable Level |
+| :-------------- | :---------- | :------------- | :------------- |
+| public          | NA          | YES            | YES            |
+| private         | NA          | YES            | YES            |
+| protected       | NA          | YES            | YES            |
+| abstract        | YES         | YES            | NA             |
+| final           | YES         | YES            | NA             |
+| static          | NA          | YES            | YES            |
 
 ### Public access modifier
 The public is the default modifier in PHP. If we do not use any modifier with the functions of the identifiers by default, it is considered as a public access modifier.
@@ -1507,7 +1523,95 @@ echo $subaru->model; // cannot access protected property // same with method
 echo $subaru->carno; // cannot access private property // same with method
 echo $subaru->drive();
 ```
-**abstract classes**  
+
+## Magic Methods
+Magic methods are special methods which override PHP's default's action when certain actions are performed on an object. All methods names starting with `__` are reserved by PHP.
+
+### Constructor
+PHP constructor function is called when the object is created.  
+The magic method `__construct()` is known as a constructor that is automatically called whenever a new object is created.  
+keep in mind that the construct function starts with two underscores (`__`).
+```php
+// classes with constructor method
+class Car
+{
+    public $brand;
+    public function __construct($brand)
+    {
+        $this->brand = $brand;
+    }
+    public function color()
+    {
+        return "$this->brand is white color";
+    }
+}
+$kia = new Car("KIA");
+$kia->color();
+```
+### Destructor
+
+`__destruct()` method is executed automatically when the object is destroyed.  
+keep in mind that the destructor function starts with two underscores (`__`).
+
+```php
+<?php
+class House
+{
+    public $name;
+    public $color;
+    public function __construct($name, $color)
+    {
+        $this->name = $name;
+        $this->color = $color;
+    }
+    public function __destruct()
+    {
+        echo "The color of the {$this->name} is {$this->color}";
+    }
+}
+$blackHouse = new House("John's House", "black");
+```
+
+## Class Inheritance
+Inheritance allows a class to reuse the code from another class without duplicating it.  
+In inheritance, you have a parent class with properties and methods, and a child class can use the code from the parent class.  
+For example, when extending a class, the subclass inherits all of the public and protected methods, properties and constants from the parent class. Unless a class overrides those methods, they will retain their original functionality.  
+
+```php
+// inherit a class
+class Car
+{
+    public $name;
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+    public function name()
+    {
+        return "The car brand is $this->name <br>";
+    }
+}
+
+class Toyota extends Car
+{
+    public $model;
+    public function __construct($name, $model)
+    {
+        parent::__construct($name);
+        $this->model = $model;
+    }
+    public function model()
+    {
+        return "$this->model is one of Toyota <br>";
+    }
+}
+$probox = new Toyota("Toyota", "Probox");
+echo $probox->name();
+echo $probox->model();
+```
+
+### abstract classes
+
 **abstract classes** are something going with inheritance.  
 Abstract classes have abstract methods in it which they need their children (child classes) to override when inheriting.  
 **Declaring Abstract Methods**  
@@ -1515,7 +1619,6 @@ Abstract classes have abstract methods in it which they need their children (chi
 * Abstract methods only define the method’s signature, without the body.
 * If a class has at least one abstract method, then the class too must be abstract.
 * When you define a child class of an abstract class, you must write the body of all the abstract methods of the parent class.  
-
 a class is an `abstract` class, you need to use the `abstract` keyword like this:
 ```php
 abstract class Electronic
@@ -1562,40 +1665,6 @@ class ConcreteClass extends MyClass
     echo "Hello";
     }
 }
-```
-
-**Class Inheritance**
-```php
-// inherit a class
-class Car
-{
-    public $name;
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-    public function name()
-    {
-        return "The car brand is $this->name <br>";
-    }
-}
-
-class Toyota extends Car
-{
-    public $model;
-    public function __construct($name, $model)
-    {
-        parent::__construct($name);
-        $this->model = $model;
-    }
-    public function model()
-    {
-        return "$this->model is one of Toyota <br>";
-    }
-}
-$probox = new Toyota("Toyota", "Probox");
-echo $probox->name();
-echo $probox->model();
 ```
 
 **Final classes**
@@ -1885,3 +1954,74 @@ $result->execute([
     'address' => 'No.1, Bagan Street, Yangon',
 ]);
 ```
+
+
+# Superglobals
+
+Superglobals — Built-in variables that are always available in all scopes
+Several predefined variables in PHP are "superglobals", which means they are available in all scopes throughout a script. There is no need to do global $variable; to access them within functions or methods. 
+
+## $GLOBALS
+References all variables available in global scope
+An associative array containing references to all variables which are currently defined in the global scope of the script.
+
+## $_SERVER
+Server and execution environment information. $_SERVER is an array containing information such as headers, paths, and script locations. The entries in this array are created by the web server.
+
+## $_GET
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+HTTP GET variables.
+An associative array of variables passed to the current script via the URL parameters (aka. query string). Note that the array is not only populated for GET requests, but rather for all requests with a query string.  
+
+## $_POST
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_POST — HTTP POST variables
+
+Description ¶
+
+An associative array of variables passed to the current script via the HTTP POST method when using application/x-www-form-urlencoded or multipart/form-data as the HTTP Content-Type in the request.
+
+## $_FILES
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_FILES — HTTP File Upload variables
+
+Description ¶
+
+An associative array of items uploaded to the current script via the HTTP POST method. The structure of this array is outlined in the POST method uploads section.
+
+## $_COOKIE
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_COOKIE — HTTP Cookies
+
+Description ¶
+
+An associative array of variables passed to the current script via HTTP Cookies.
+
+## $_SESSION
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_SESSION — Session variables
+
+Description ¶
+
+An associative array containing session variables available to the current script. See the Session functions documentation for more information on how this is used.
+
+## $_REQUEST
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_REQUEST — HTTP Request variables
+
+Description ¶
+
+An associative array that by default contains the contents of $_GET, $_POST and $_COOKIE.
+
+## $_ENV
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+$_ENV — Environment variables
+
+Description ¶
+
+An associative array of variables passed to the current script via the environment method.
+
+These variables are imported into PHP's global namespace from the environment under which the PHP parser is running. Many are provided by the shell under which PHP is running and different systems are likely running different kinds of shells, a definitive list is impossible. Please see your shell's documentation for a list of defined environment variables.
+
+Other environment variables include the CGI variables, placed there regardless of whether PHP is running as a server module or CGI processor.
+
