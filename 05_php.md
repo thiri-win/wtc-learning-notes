@@ -1402,14 +1402,14 @@ class ClassName
 
 ### Creating Objects in PHP
 When class is created, we can create any number of objects in that class. The object is created with the help of the new keyword.  
-The process of creating a new object is also called instantiation.  
-You can create a new **object** like this:
+The process of creating a new object is also called **instantiation**.  
+You can create a **new object** like this:
 ```php
 <?php
 
 class People
 {
-
+    //
 }
 $person = new People();
 ```
@@ -1468,62 +1468,6 @@ echo $nissan->color();
 ### $this
 `$this` သည် ယခုလက်ရှိ class ကိုရည်ညွှန်းခြင်းဖြစ်ပါသည်။
 
-## Access Modifiers
-PHP supports various keywords to make any variable to access any variable and the identifiers.  
-Assign these keywords to the class, function or identifiers.  
-* Public
-* Private
-* Protected
-* Abstract
-* Final
-Can use these access modifiers as per our business need to grant permission or revoke permission throughout the program or the application.  
-
-| Access Modifier | Class Level | Function Level | Variable Level |
-| :-------------- | :---------- | :------------- | :------------- |
-| public          | NA          | YES            | YES            |
-| private         | NA          | YES            | YES            |
-| protected       | NA          | YES            | YES            |
-| abstract        | YES         | YES            | NA             |
-| final           | YES         | YES            | NA             |
-| static          | NA          | YES            | YES            |
-
-### Public access modifier
-The public is the default modifier in PHP. If we do not use any modifier with the functions of the identifiers by default, it is considered as a public access modifier.
-### Private access modifier
-This modifier us the private keyword to process with it. We cannot use the private modifier with the class.  
-We can use this with the class variables and class methods only.
-When we declare and use the private, it cannot be accessed using the class’s object. It can only be used within the class.
-### Protected access modifier
-Like public and private, protected itself doesn’t support at the class level.  
-Like a private modifier, protected also restricts the class variables’ access or the function from outside of the
-class.  
-It can be used within the same class and from the subclass.  
-
-```php
-// access control -> public, protected, private
-class Car
-{
-    public $brand;
-    protected $model;
-    private $carno;
-    public function __construct($brand, $model, $carno)
-    {
-        $this->brand = $brand;
-        $this->model = $model;
-        $this->carno = $carno;
-    }
-    public function drive()
-    {
-        return "$this->brand $this->model ($this->carno) can drive very fast";
-    }
-}
-$subaru = new Car("Japan", "Samba", "1234");
-echo $subaru->brand;
-echo $subaru->model; // cannot access protected property // same with method
-echo $subaru->carno; // cannot access private property // same with method
-echo $subaru->drive();
-```
-
 ## Magic Methods
 Magic methods are special methods which override PHP's default's action when certain actions are performed on an object. All methods names starting with `__` are reserved by PHP.
 
@@ -1570,6 +1514,61 @@ class House
     }
 }
 $blackHouse = new House("John's House", "black");
+```
+
+## Access Modifiers
+PHP supports various keywords to make any variable to access any variable and the identifiers.  
+Assign these keywords to the class, function or identifiers.  
+* Public
+* Private
+* Protected
+* Abstract
+* Final  
+
+| Access Modifier | Class Level | Function Level | Variable Level |
+| :-------------- | :---------- | :------------- | :------------- |
+| public          | NA          | YES            | YES            |
+| private         | NA          | YES            | YES            |
+| protected       | NA          | YES            | YES            |
+| abstract        | YES         | YES            | NA             |
+| final           | YES         | YES            | NA             |
+| static          | NA          | YES            | YES            |
+
+### Public access modifier
+The public is the default modifier in PHP. If we do not use any modifier with the functions of the identifiers by default, it is considered as a public access modifier.
+### Private access modifier
+This modifier us the private keyword to process with it. We cannot use the private modifier with the class.  
+We can use this with the class variables and class methods only.
+When we declare and use the private, it cannot be accessed using the class’s object. It can only be used within the class.
+### Protected access modifier
+Like public and private, protected itself doesn’t support at the class level.  
+Like a private modifier, protected also restricts the class variables’ access or the function from outside of the
+class.  
+It can be used within the same class and from the subclass.  
+
+```php
+// access control -> public, protected, private
+class Car
+{
+    public $brand;
+    protected $model;
+    private $carno;
+    public function __construct($brand, $model, $carno)
+    {
+        $this->brand = $brand;
+        $this->model = $model;
+        $this->carno = $carno;
+    }
+    public function drive()
+    {
+        return "$this->brand $this->model ($this->carno) can drive very fast";
+    }
+}
+$subaru = new Car("Japan", "Samba", "1234");
+echo $subaru->brand;
+echo $subaru->model; // cannot access protected property // same with method
+echo $subaru->carno; // cannot access private property // same with method
+echo $subaru->drive();
 ```
 
 ## Class Inheritance
