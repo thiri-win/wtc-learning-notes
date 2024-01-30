@@ -1499,6 +1499,7 @@ keep in mind that the destructor function starts with two underscores (`__`).
 
 ```php
 <?php
+
 class House
 {
     public $name;
@@ -1508,12 +1509,16 @@ class House
         $this->name = $name;
         $this->color = $color;
     }
+    public function about() {
+        return "The color of the {$this->name} is {$this->color}";
+    }
     public function __destruct()
     {
-        echo "The color of the {$this->name} is {$this->color}";
+        echo "<br>This is all the information of the House Class";
     }
 }
 $blackHouse = new House("John's House", "black");
+print_r($blackHouse->about());
 ```
 
 ## Access Modifiers
@@ -1646,6 +1651,7 @@ class MyClass
 {
     abstract public function myMethod();
 }
+// Fatal error: Class MyClass contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (MyClass::myMethod)
 ```
 
 It is an error because there is no abstract keyword before the class:  
@@ -2023,4 +2029,5 @@ An associative array of variables passed to the current script via the environme
 These variables are imported into PHP's global namespace from the environment under which the PHP parser is running. Many are provided by the shell under which PHP is running and different systems are likely running different kinds of shells, a definitive list is impossible. Please see your shell's documentation for a list of defined environment variables.
 
 Other environment variables include the CGI variables, placed there regardless of whether PHP is running as a server module or CGI processor.
+
 
