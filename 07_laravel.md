@@ -353,7 +353,7 @@ To generate a seeder, execute the `make:seeder` Artisan command. All seeders gen
 ```console
 php artisan make:seeder PostSeeder
 ```
-and new seeder file is added in `database/seeders/PostSeeder.php`
+and new seeder file is added in `database/seeders/DatabaseSeeder.php`
 ```php
 public function run()
 {
