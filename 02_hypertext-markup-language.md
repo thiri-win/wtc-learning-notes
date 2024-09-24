@@ -334,11 +334,18 @@ all html elements tag => [click for more elements](https://developer.mozilla.org
 
 # HTML Exercises
 * [portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/01_html-portfolio-1.html)
+* ![](images/html-eg-1.png)
 * [portfolio - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/02_html-portfolio-2.html)
+* ![](images/html-eg-2.png)
 * [travel agency](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/03_html-travel.html)
+* ![](images/html-eg-3.png)
 * [table - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/04_html-table-1.html)
+* ![](images/html-eg-4.png)
 * [table - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/05_html-table-2.html)
+* ![](images/html-eg-5.png)
 * [form - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/06_html-form-1.html)
+* ![](images/html-eg-6.png)
 * [form - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/07_html-form-2.html)
+* ![](images/html-eg-7.png)
 
 
