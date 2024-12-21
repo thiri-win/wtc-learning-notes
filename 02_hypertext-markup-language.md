@@ -347,5 +347,5 @@ all html elements tag => [click for more elements](https://developer.mozilla.org
 * ![](images/html-eg-6.png)
 * [form - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/07_html-form-2.html)
 * ![](images/html-eg-7.png)
-
+<img width="100%" alt="Screenshot 2024-12-21 at 8 18 04 PM" src="https://github.com/user-attachments/assets/094ba2c8-1b57-4870-9f19-18ee55121141" />
 
