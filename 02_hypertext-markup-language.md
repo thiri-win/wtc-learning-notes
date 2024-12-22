@@ -347,5 +347,10 @@ all html elements tag => [click for more elements](https://developer.mozilla.org
 * ![](images/html-eg-6.png)
 * [form - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/07_html-form-2.html)
 * ![](images/html-eg-7.png)
-<img width="1440" alt="Screenshot 2024-12-21 at 8 22 09 PM" src="https://github.com/user-attachments/assets/5b113ecd-c8f7-4d63-8de5-0720b508cdcd" />
+<img width="1440" alt="exercise-1" src="https://github.com/user-attachments/assets/814689bd-84f2-47db-9204-4de681ff35e5" />
+<img width="1440" alt="exercise-2" src="https://github.com/user-attachments/assets/86e61ef9-25dc-462e-b561-6d02611ce1d1" />
+<img width="1440" alt="exercise-3" src="https://github.com/user-attachments/assets/8e052760-ed02-4c96-8341-e3009d090c5c" />
+<img width="1440" alt="exercise-4" src="https://github.com/user-attachments/assets/eb9e4856-7935-4088-8ab5-c5d64e346186" />
+<img width="1440" alt="exercise-5" src="https://github.com/user-attachments/assets/5f64a4f1-7253-4095-8d0c-2febae5fb10a" />
+
 
