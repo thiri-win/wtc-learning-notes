@@ -332,25 +332,18 @@ Forms - Fieldset and Legend
 
 all html elements tag => [click for more elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-# HTML Exercises
-* [portfolio - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/01_html-portfolio-1.html)
-* ![](images/html-eg-1.png)
-* [portfolio - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/02_html-portfolio-2.html)
-* ![](images/html-eg-2.png)
-* [travel agency](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/03_html-travel.html)
-* ![](images/html-eg-3.png)
-* [table - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/04_html-table-1.html)
-* ![](images/html-eg-4.png)
-* [table - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/05_html-table-2.html)
-* ![](images/html-eg-5.png)
-* [form - 1](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/06_html-form-1.html)
-* ![](images/html-eg-6.png)
-* [form - 2](https://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/main/exercises/07_html-form-2.html)
-* ![](images/html-eg-7.png)
-<img width="1440" alt="exercise-1" src="https://github.com/user-attachments/assets/814689bd-84f2-47db-9204-4de681ff35e5" />
-<img width="1440" alt="exercise-2" src="https://github.com/user-attachments/assets/86e61ef9-25dc-462e-b561-6d02611ce1d1" />
-<img width="1440" alt="exercise-3" src="https://github.com/user-attachments/assets/8e052760-ed02-4c96-8341-e3009d090c5c" />
-<img width="1440" alt="exercise-4" src="https://github.com/user-attachments/assets/eb9e4856-7935-4088-8ab5-c5d64e346186" />
-<img width="1440" alt="exercise-5" src="https://github.com/user-attachments/assets/5f64a4f1-7253-4095-8d0c-2febae5fb10a" />
+## HTML Exercises
+<img width="300" alt="exercise-1" src="https://github.com/user-attachments/assets/814689bd-84f2-47db-9204-4de681ff35e5" />
+<img width="300" alt="exercise-2" src="https://github.com/user-attachments/assets/86e61ef9-25dc-462e-b561-6d02611ce1d1" />
+<img width="300" alt="exercise-3" src="https://github.com/user-attachments/assets/8e052760-ed02-4c96-8341-e3009d090c5c" />
+<img width="300" alt="exercise-4" src="https://github.com/user-attachments/assets/eb9e4856-7935-4088-8ab5-c5d64e346186" />
+<img width="300" alt="exercise-5" src="https://github.com/user-attachments/assets/5f64a4f1-7253-4095-8d0c-2febae5fb10a" />
 
+## HTML Homework
+<img width="300" alt="homework-3" src="https://github.com/user-attachments/assets/19edcfd3-280a-4cb5-9ef1-1774d25a3e5c" />
+<img width="300" alt="homework-4" src="https://github.com/user-attachments/assets/15c65ad0-0dd9-47d0-aed5-47c0bce1ce02" />
+<img width="300" alt="homework-5" src="https://github.com/user-attachments/assets/616f6541-0fb2-408a-8b83-a9e4d578a11c" />
+<img width="300" alt="homework-6" src="https://github.com/user-attachments/assets/a8eba1b2-7379-48eb-a6ad-34ff1e6f2371" />
+<img width="300" alt="homework-1" src="https://github.com/user-attachments/assets/8fe80c99-b754-4f6d-8ddc-8238e0d911c2" />
+<img width="300" alt="homework-2" src="https://github.com/user-attachments/assets/9809ba9f-f283-4584-806a-bc5a21cbafd2" />
 
