@@ -537,3 +537,8 @@ The viewport meta tag
 *   If you look at the HTML source of a responsive page, you will usually see the following `<meta>` tag in the `<head>` of the document.
 *   `<meta name="viewport" content="width=device-width, initial-scale=1" />`
 *   This viewport meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size.
+
+
+## css exercises
+<img width="400" alt="Screenshot 2024-12-28 at 12 53 57 PM" src="https://github.com/user-attachments/assets/daddef5f-02f9-46d7-8f3f-fbb1a993e3b9" />
+<img width="400" alt="Screenshot 2024-12-28 at 12 38 23 PM" src="https://github.com/user-attachments/assets/2dba8c8d-6a56-443c-962e-349828bea0f1" />
