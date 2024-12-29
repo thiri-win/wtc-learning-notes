@@ -540,5 +540,5 @@ The viewport meta tag
 
 
 ## css exercises
-<img width="400" alt="Screenshot 2024-12-28 at 12 53 57 PM" src="https://github.com/user-attachments/assets/daddef5f-02f9-46d7-8f3f-fbb1a993e3b9" />
-<img width="400" alt="Screenshot 2024-12-28 at 12 38 23 PM" src="https://github.com/user-attachments/assets/2dba8c8d-6a56-443c-962e-349828bea0f1" />
+[![](images/01_css_ex.png)](https://github.com/thiri-win/wtc-learning-notes/exercises/01_css_ex.html)
+
