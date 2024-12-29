@@ -540,5 +540,7 @@ The viewport meta tag
 
 
 ## css exercises
-[![](images/01_css_ex.png)](https://github.com/thiri-win/wtc-learning-notes/exercises/01_css_ex.html)
-
+[![](images/01_css_ex.png)](http://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/a9d888d596450818b4fe1847d0c532ed022475c1/exercises/css/01_css_ex.html)
+[![](images/02_css_ex.png)](http://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/a9d888d596450818b4fe1847d0c532ed022475c1/exercises/css/02_css_ex.html)
+[![](images/03_css_ex.png)](http://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/a9d888d596450818b4fe1847d0c532ed022475c1/exercises/css/03_css_ex.html)
+[![](images/04_css_ex.png)](http://htmlpreview.github.io/?https://github.com/thiri-win/wtc-learning-notes/blob/a9d888d596450818b4fe1847d0c532ed022475c1/exercises/css/04_css_ex.html)
