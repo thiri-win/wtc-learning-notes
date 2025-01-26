@@ -97,12 +97,14 @@ echo $my_var;
 ```
 ## Use of Variables
 Variables are used for storing values such as numeric values, characters, character strings, or memory addresses so that they can be used in any part of the program.
+
 ## PHP Data Types
 A Data type is the classification of data into a category according to its attributes;
 * Alphanumeric characters are classified as strings
 * Whole numbers are classified integers
 * Numbers with decimal points are classified as floating points.
 * True or false values are classified as Boolean.
+
 ### PHP is a loosely typed
 Integer – whole numbers e.g. -3, 0, 69. The maximum value of an integer is platform-dependent. On a 32 bit machine, it’s usually around 2 billion. 64 bit machines usually have larger values.  
 The constant `PHP_INT_MAX` is used to determine the maximum value.
@@ -111,48 +113,114 @@ echo PHP_INT_MAX;
 // Output: 9223372036854775807
 ```
 
+### Data Types
+* Scalar type
+    #### Integer
+    ```php
+    $num_1 = -100;
+    echo $num_1; // 1
+    echo gettype($num_1); // integer
+    ```  
+    #### Float
+    ```php
+    $num_3 = 1.234;
+    echo $num_3; // 1.234
+    echo gettype($num_3); // double
+    ```
+    #### String
+    ```php
+    $str = "hello, PHP";
+    echo $str; // hello, PHP
+    echo gettype($str); // string
+    ```
+    #### Boolean
+    ```php
+    $isCompleted = true;
+    echo $isCompleted; // 1
+    echo gettype($isCompleted); // boolean
+    ```
+    ```php
+    $isCompleted = false;
+    echo $isCompleted; // ''
+    echo gettype($isCompleted);// boolean
+    ```
+* Compound type
+    #### Array
+    ```php
+    $arr = ['apple', 'orange', 'mango'];
+    print_r($arr);
+    // Array
+    // (
+    //     [0] => one
+    //     [1] => two
+    //     [2] => three
+    // )
+    ```
+    #### Object
+    ```php
+    class Car {
+        public $brand;
+        function __construct($brand) {
+            $this->brand = $brand;
+        }
+    }
+    $myCar = new Car("Toyota");
+    print_r($myCar);
+    // Car Object
+    // (
+    //     [brand] => Toyota
+    // )
+    ```
+* Special type 
+    #### Null
+    ```php
+    $email = null;
+    var_dump($email); // NULL
+    ```
+    ### Resource
+
 ## PHP Operators
 
 ### Arithmetic operators
-|Operator|Name|Description|Example|Output|
-|--------|----|-----------|-------|------|
-|+|Addition|Summation of x and y|1 + 1;|2|
-|-|Subtraction|Difference between x and y|1 – 1;|0|
-|*|Multiplication|Multiplies x and y|3 * 7;|21|
-|/|Division|Quotient of x and y|45 / 5;|9|
-|%|PHP Modulus|Gives remainder of dividing x and y|10 % 3|1|
-|-n|Negation|Turns n into a negative number|-(-5)|5|
-|x.y|Concatenation|Puts together x and y|“PHP”.”ROCKS”;<br>10.3;|PHP ROCKS<br>103|
+| Operator | Name           | Description                         | Example                 | Output           |
+|----------|----------------|-------------------------------------|-------------------------|------------------|
+| +        | Addition       | Summation of x and y                | 1 + 1;                  | 2                |
+| -        | Subtraction    | Difference between x and y          | 1 – 1;                  | 0                |
+| *        | Multiplication | Multiplies x and y                  | 3 * 7;                  | 21               |
+| /        | Division       | Quotient of x and y                 | 45 / 5;                 | 9                |
+| %        | PHP Modulus    | Gives remainder of dividing x and y | 10 % 3                  | 1                |
+| -n       | Negation       | Turns n into a negative number      | -(-5)                   | 5                |
+| x.y      | Concatenation  | Puts together x and y               | “PHP”.”ROCKS”;<br>10.3; | PHP ROCKS<br>103 |
 
 ### Assignment Operators
-|Operator|Name|Description|Example|Output|
-|--------|----|-----------|-------|------|
-|x = ?|Assignment|Assigns the value of x to ?|`$x = 5;`|5|
-|x += ?|Addition|Increments the value of x by ?|`$x = 2;`<br>`$x += 1;`|3|
-|x -= ?|Substraction|Subtracts ? from the value of x|`$x = 3;`<br>`$x -= 2;`|1|
-|x *= ?|Multiplication|Multiplies the value of x ? times|`$x = 0;`<br>`$x *= 9;`|0|
-|x /= ?|Division|Quotient of x and ?|`$x = 6;`<br>`$x /= 3;`|2|
-|x %= ?|Modulus|The remainder of dividing x by ?|`$x = 3;`<br>`$x %= 2;`|1|
-|x .= ?|Concatenate|Puts together items|`$x = “Pretty”;`<br>`$x .= “ Cool!”;`|Pretty Cool!|
+| Operator | Name           | Description                       | Example                               | Output       |
+|----------|----------------|-----------------------------------|---------------------------------------|--------------|
+| x = ?    | Assignment     | Assigns the value of x to ?       | `$x = 5;`                             | 5            |
+| x += ?   | Addition       | Increments the value of x by ?    | `$x = 2;`<br>`$x += 1;`               | 3            |
+| x -= ?   | Substraction   | Subtracts ? from the value of x   | `$x = 3;`<br>`$x -= 2;`               | 1            |
+| x *= ?   | Multiplication | Multiplies the value of x ? times | `$x = 0;`<br>`$x *= 9;`               | 0            |
+| x /= ?   | Division       | Quotient of x and ?               | `$x = 6;`<br>`$x /= 3;`               | 2            |
+| x %= ?   | Modulus        | The remainder of dividing x by ?  | `$x = 3;`<br>`$x %= 2;`               | 1            |
+| x .= ?   | Concatenate    | Puts together items               | `$x = “Pretty”;`<br>`$x .= “ Cool!”;` | Pretty Cool! |
 
 ### Comparison operators
-|Operator|Name|Description|Example|Output|
-|--------|----|-----------|-------|------|
-|x == y|Equal|Compares x and y then returns true if they are equal|1 == ‘1’;|True or 1|
-|x === y|Identical|Compares both values and data types|1 === ‘1’;|False or 0. Since 1 is integer and “1” is string|
-|x != y,<br>x <> y|PHP Not equal|Compares values of x and y returns true if the values are not equal|2 != 1;|True or 1|
-|x > y|Greater than|Compares x and y then returns true if x is greater than y|3 > 1;|True or 1|
-|x < y|Less than|Compares x and y then returns true if x is less than y|2 < 1; |False or 0;|
-|x >= y|Greater than or equal|Compares x and y then returns true if x is greater than or equal to y|3 > 1; |True or 1|
-|x <= y|Less than or equal|Compares x and y then returns true if x is less than or equal to y|2 < 1; |False or 0;|
+| Operator          | Name                  | Description                                                           | Example    | Output                                           |
+|-------------------|-----------------------|-----------------------------------------------------------------------|------------|--------------------------------------------------|
+| x == y            | Equal                 | Compares x and y then returns true if they are equal                  | 1 == ‘1’;  | True or 1                                        |
+| x === y           | Identical             | Compares both values and data types                                   | 1 === ‘1’; | False or 0. Since 1 is integer and “1” is string |
+| x != y,<br>x <> y | PHP Not equal         | Compares values of x and y returns true if the values are not equal   | 2 != 1;    | True or 1                                        |
+| x > y             | Greater than          | Compares x and y then returns true if x is greater than y             | 3 > 1;     | True or 1                                        |
+| x < y             | Less than             | Compares x and y then returns true if x is less than y                | 2 < 1;     | False or 0;                                      |
+| x >= y            | Greater than or equal | Compares x and y then returns true if x is greater than or equal to y | 3 > 1;     | True or 1                                        |
+| x <= y            | Less than or equal    | Compares x and y then returns true if x is less than or equal to y    | 2 < 1;     | False or 0;                                      |
 
 ### Logical operators
-|Operator|Name|Description|Example|Output|
-|--------|----|-----------|-------|------|
-|x and y <br>x && y|And|Returns true if both x and y are true|1 and 4;<br>true && false;|true or 1<br>false or 0|
-|x or y <br> x \|\| y|Or|Returns true if either x or y is true|6 or 9;<br>0 \|\| 0;|true or 1<br>false or 0|
-|x xor y|Exclusive or,Xor|Returns true if only x is true or only y is true|1 xor 1;<br>1 xor 0;|false or 0<br>true or 1|
-|! x|Not|Returns true if x is false and false if x is true|!0;|true or 1|
+| Operator             | Name             | Description                                       | Example                    | Output                  |
+|----------------------|------------------|---------------------------------------------------|----------------------------|-------------------------|
+| x and y <br>x && y   | And              | Returns true if both x and y are true             | 1 and 4;<br>true && false; | true or 1<br>false or 0 |
+| x or y <br> x \|\| y | Or               | Returns true if either x or y is true             | 6 or 9;<br>0 \|\| 0;       | true or 1<br>false or 0 |
+| x xor y              | Exclusive or,Xor | Returns true if only x is true or only y is true  | 1 xor 1;<br>1 xor 0;       | false or 0<br>true or 1 |
+| ! x                  | Not              | Returns true if x is false and false if x is true | !0;                        | true or 1               |
 
 ## Variable Type Casting
 Type casting is converting a variable or value into a desired data type. This is very useful when performing arithmetic computations that require variables to be of the same data type. Type casting in PHP is done by the interpreter.
@@ -1531,7 +1599,7 @@ Assign these keywords to the class, function or identifiers.
 * Final  
 
 | Access Modifier | Class Level | Function Level | Variable Level |
-| :-------------- | :---------- | :------------- | :------------- |
+|:----------------|:------------|:---------------|:---------------|
 | public          | NA          | YES            | YES            |
 | private         | NA          | YES            | YES            |
 | protected       | NA          | YES            | YES            |
