@@ -7,94 +7,65 @@
 * PHP scripts can only be interpreted on a server that has PHP installed.
 * The client computers accessing the PHP scripts require a web browser only.
 * A PHP file contains PHP tags and ends with the extension `.php`.
-* 
+
 ## PHP Syntax
 ```php
 <?php
 echo 'Hello World';
 ?>
 ```
-A PHP file can also contain tags such as HTML and client-side scripts such as JavaScript.
-* HTML is an added advantage when learning PHP Language. You can even learn PHP without knowing HTML but it’s recommended you at least know the basics of HTML.
-* Database management systems DBMS for database powered applications.
-Diagram shown below illustrates the basic architecture of a PHP web application and how the server handles
-the requests.
+A PHP file can also contain tags such as HTML and client-side scripts such as JavaScript. HTML is an added advantage when learning PHP Language. You can even learn PHP without knowing HTML but it’s recommended you at least know the basics of HTML. Database management systems DBMS for database powered applications. Diagram shown below illustrates the basic architecture of a PHP web application and how the server handles the requests.
 
 ## Why use PHP?
-* Below are some of the compelling reasons.
 * PHP is open source and free.
 * Short learning curve compared to other languages such as JSP, ASP etc.
 * Large community document
 * Most web hosting servers support PHP
 * latest technology trends to update.
 * PHP has in built support for working hand in hand with MySQL;
-* You can also use PHP with
-    * Postgres
-    * Oracle
-    * MS SQL Server
-    * ODBC etc.
+* You can also use PHP with <mark>Postgres</mark>, <mark>Oracle</mark>, <mark>MS SQL Server</mark>, <mark>ODBC etc.</mark>
 * PHP is cross platform: you can deploy your application on a number of different operating systems such as windows, Linux, Mac OS etc.
   
 ## PHP File Extensions
-File extension and Tags In order for the server to identify our PHP files and scripts, we must save the file with the `.php` extension. Older PHP file extensions include
-* .phtml
-* .php3
-* .php4
-* .php5
-* .phps  
-PHP was designed to work with HTML, and as such, it can be embedded into the HTML code.
+File extension and Tags In order for the server to identify our PHP files and scripts, we must save the file with the `.php` extension. Older PHP file extensions include <mark>.phtml</mark>, <mark>.php3</mark>, <mark>.php4</mark>, <mark>.php5</mark>, <mark>.phps</mark>. PHP was designed to work with HTML, and as such, it can be embedded into the HTML code.
 ```php  
 <?php
 echo 'Hello World';
 // output: Hello World
 ?>
 ```
-## Summary
+### Summary
 * PHP stands for Hypertext pre-processor
 * PHP is a server side scripting language. This means that it is executed on the server. The client applications do not need to have PHP installed.
 * PHP files are saved with the “.php” file extension, and the PHP development code is enclosed in tags.
 * PHP is open source and cross platform
 
-# PHP Variable
-A variable is a name given to a memory location that stores data at runtime.
-The scope of a variable determines its visibility.
-A global variable is accessible to all the scripts in an application.
-A local variable is only accessible to the script that it was defined in.  
-
+## What is Variable?
+A variable is a name given to a memory location that stores data at runtime. The scope of a variable determines its visibility. A global variable is accessible to all the scripts in an application. A local variable is only accessible to the script that it was defined in.  
 <ins>Rules of Variable</ins>
 * All variable names must start with the dollar sign.  
-`$my_var`
-* Variable names are case sensitive;   
-this means `$my_var` is different from `$MY_VAR`    
-`$my_var != $MY_VAR`
+`$name`
+* Variable names are case sensitive. This means `$num` is different from `$NUM`    
+`$num != $NUM`
 * All variables names must start with a letter follow other characters    
-`✅ $my_var1` `❌ $1my_var`
+`✅ $num1` `❌ $1num`
 * Variable names must not contain any spaces,  
 `❌ $first name` is not a legal variable name.  
 You can instead use an underscore in place of the space `✅ $first_name`.
 * You can't use characters such as the dollar or minus sign to separate variable names.  
-`✅ $my_var;` `❌ $my var;`
+`✅ $my_var;` `❌ $my-var;` `❌ $my var;`
+
 ```php
-<?php
 $my_var = 1;
-echo $my_var;
-?>
-//Output: 1
-```
+echo $my_var; //Output: 1
 
-## Floating point numbers
-```php
 $my_var = 3.14;
-echo $my_var;
-// Output: 3.14
+echo $my_var; // Output: 3.14
+
+$my_var ="Hypertext Pre Processor";
+echo $my_var; // Output: Hypertext Pre Processor
 ```
 
-## Character strings
-```php
-$my_var ="Hypertext Pre Processor";
-echo $my_var;
-// Output: Hypertext Pre Processor
-```
 ## Use of Variables
 Variables are used for storing values such as numeric values, characters, character strings, or memory addresses so that they can be used in any part of the program.
 
@@ -104,80 +75,66 @@ A Data type is the classification of data into a category according to its attri
 * Whole numbers are classified integers
 * Numbers with decimal points are classified as floating points.
 * True or false values are classified as Boolean.
+* PHP is a loosely typed - Integer – whole numbers e.g. -3, 0, 69. The maximum value of an integer is platform-dependent. On a 32 bit machine, it’s usually around 2 billion. 64 bit machines usually have larger values. The constant `PHP_INT_MAX` is used to determine the maximum value.
 
-### PHP is a loosely typed
-Integer – whole numbers e.g. -3, 0, 69. The maximum value of an integer is platform-dependent. On a 32 bit machine, it’s usually around 2 billion. 64 bit machines usually have larger values.  
-The constant `PHP_INT_MAX` is used to determine the maximum value.
+### Scalar type
+
 ```php
-echo PHP_INT_MAX;
-// Output: 9223372036854775807
+$num_1 = -100;
+echo $num_1; // 1
+echo gettype($num_1); // integer
+
+$num_3 = 1.234;
+echo $num_3; // 1.234
+echo gettype($num_3); // double
+
+$str = "hello, PHP";
+echo $str; // hello, PHP
+echo gettype($str); // string
+
+$isCompleted = true;
+echo $isCompleted; // 1
+echo gettype($isCompleted); // boolean
+
+$isCompleted = false;
+echo $isCompleted; // ''
+echo gettype($isCompleted);// boolean
+```
+### Compound type
+```php
+// Array
+$arr = ['apple', 'orange', 'mango'];
+print_r($arr);
+// Array
+// (
+//     [0] => one
+//     [1] => two
+//     [2] => three
+// )
+
+//  Object
+class Car {
+    public $brand;
+    function __construct($brand) {
+        $this->brand = $brand;
+    }
+}
+$myCar = new Car("Toyota");
+print_r($myCar);
+// Car Object
+// (
+//     [brand] => Toyota
+// )
 ```
 
-### Data Types
-* Scalar type
-    #### Integer
-    ```php
-    $num_1 = -100;
-    echo $num_1; // 1
-    echo gettype($num_1); // integer
-    ```  
-    #### Float
-    ```php
-    $num_3 = 1.234;
-    echo $num_3; // 1.234
-    echo gettype($num_3); // double
-    ```
-    #### String
-    ```php
-    $str = "hello, PHP";
-    echo $str; // hello, PHP
-    echo gettype($str); // string
-    ```
-    #### Boolean
-    ```php
-    $isCompleted = true;
-    echo $isCompleted; // 1
-    echo gettype($isCompleted); // boolean
-    ```
-    ```php
-    $isCompleted = false;
-    echo $isCompleted; // ''
-    echo gettype($isCompleted);// boolean
-    ```
-* Compound type
-    #### Array
-    ```php
-    $arr = ['apple', 'orange', 'mango'];
-    print_r($arr);
-    // Array
-    // (
-    //     [0] => one
-    //     [1] => two
-    //     [2] => three
-    // )
-    ```
-    #### Object
-    ```php
-    class Car {
-        public $brand;
-        function __construct($brand) {
-            $this->brand = $brand;
-        }
-    }
-    $myCar = new Car("Toyota");
-    print_r($myCar);
-    // Car Object
-    // (
-    //     [brand] => Toyota
-    // )
-    ```
-* Special type 
-    #### Null
-    ```php
-    $email = null;
-    var_dump($email); // NULL
-    ```
-    ### Resource
+### Special type 
+```php
+// Null
+$email = null;
+var_dump($email); // NULL
+
+// Resource
+```
 
 ## PHP Operators
 
@@ -224,56 +181,53 @@ echo PHP_INT_MAX;
 
 ## Variable Type Casting
 Type casting is converting a variable or value into a desired data type. This is very useful when performing arithmetic computations that require variables to be of the same data type. Type casting in PHP is done by the interpreter.
-```php
 
+```php
 $a = 1;
 $b = 1.5;
 $c = $a + $b;
 $c = $a + (int) $b;
-echo $c;
-?>
-// Output: 2
+echo $c; // Output: 2
 ```
 There are two types of casting
 * Implicit Casting (Automatic)
-* Explicit Casting (Manual)
-### Implicit Casting
 ```php
 $x = 2;
 $y = 4;
 var_dump($x / $y); // 2/4 = 0.5 (Float)
 var_dump($y / $x); // 4/2 = 2 (Int)
 ```
-### Explicit Casting
-Casting to an integer. Both (int) and (integer) casts are valid.
+* Explicit Casting (Manual) - Casting to an integer. Both (int) and (integer) casts are valid.
 ```php
 $x = 5.35;
 $y = (int) $x; // cast $x to integer
 var_dump($y);
-```
-```php
+
 $x = '25';
 $y = (integer) $x; // cast $x to int
 var_dump($y);
-```
-```php
+
 $string = '10 Animals';
 $numberOfAnimals = (int) $string;
 echo $numberOfAnimals;
 ```
+
 `var_dump` function is used to determine the data type.
+
 ```php
 $a = 1;
-var_dump($a);
+var_dump($a); // Output: int(1)
+
 $b = 1.5;
-var_dump($b);
+var_dump($b); // Output: float(1.5)
+
 $c = "I Love PHP";
-var_dump($c);
+var_dump($c); // Output: string(10) "I Love PHP"
+
 $d = true;
-var_dump($d);
-// Output: int(1) float(1.5) string(10) "I Love PHP" bool(true)
+var_dump($d); // Output: bool(true)
 ```
-## Summary
+### Summary
 * PHP is a loosely typed language.
 * Variables are memory locations used to store data
 * The value of constants cannot be changed at runtime
@@ -295,80 +249,73 @@ define( 'ORIGIN', [0, 0] );
 ```
 The following example uses the const keyword to define the SALES_TAX constant:
 ```php
-    const SALES_TAX = 0.085;
-    $gross_price = 100;
-    $net_price = $gross_price * (1 + SALES_TAX);
-    echo $net_price; // 108.5
+const SALES_TAX = 0.085;
+$gross_price = 100;
+$net_price = $gross_price * (1 + SALES_TAX);
+echo $net_price; // 108.5
 ```
 ## define vs const
-`define()` is a function while the const is a language construct.  
-`define()` function defines a constant at run-time, whereas the const keyword defines a constant at compile
-time.  
-use the `define()` function to define a constant conditionally
+`define()` is a function while the const is a language construct. `define()` function defines a constant at run-time, whereas the const keyword defines a constant at compile time. use the `define()` function to define a constant conditionally
 ```php
 if(condition)
 {
     define('WIDTH', '1140px');
 }
 ```
-cannot use the const keyword to define a constant this way.
+❌ cannot use the `const` keyword to define a constant this way.
 ```php
 if(condition)
 {
     const WIDTH = '1140px';
 }
 ```
-## Summary
+### Summary
 * A constant is a name that holds a simple value that cannot be changed during the execution of the script. From PHP 7, a constant can hold an array.
 * A constant can be accessed from anywhere in the script.
 * Use the `define()` function or `const` keyword to define a constant.
 * Use the `define()` function if you want to define a constant conditionally or using an expression.
 
-# PHP Control Structure
+## PHP Control Structure
 
-## Conditional Statements
+### Conditional Statements
 Conditional Statements allow you to branch the path of execution in a script based on whether a single, or multiple conditions, evaluate to true or false.  
-**If Statements**  
 ```php
+// if Statement
+
 $x=1;
 if ($x == 1)
 print '$x is equal to 1';
-```
-```php
+
 $age = 50;
 if ($age > 30)
 {
     echo "Your age is greater than 30!";
 }
+
+$x=1;
+if ($x == 1) {
+    print 'x is equal to 1';
+    $x++;
+    print 'now x is equal to 2';
+}
 ```
-**Else Statements**  
 ```php
+// else Statement  
+
 $x=1;
 if ($x == 2) {
     print 'x is equal to 2';
 } else {
     print 'x is equal to 1';
 }
-```
-```php
+
 $age = 50;
 if ($age < 30){
     echo "Your age is less than 30!";
-}
-else{
+} else{
     echo "Your age is greater than or equal to 30!";
 }
-```
-more than one statement
-```php
-$x=1;
-if ($x == 1) {
-    print 'x is equal to 1';
-$x++;
-    print 'now x is equal to 2';
-}
-```
-```php
+
 $year = 2014; // Leap years are divisible by 400 or by 4 but not 100
 if(($year % 400 == 0) || (($year % 100 != 0) && ($year % 4 == 0))){
     echo "$year is a leap year.";
@@ -376,8 +323,10 @@ if(($year % 400 == 0) || (($year % 100 != 0) && ($year % 4 == 0))){
     echo "$year is not a leap year.";
 }
 ```
-**Else If Statements**
+
 ```php
+// elseif Statement
+
 $x=1;
 if ($x == 2) {
     print 'x is equal to 2';
@@ -389,9 +338,11 @@ else {
     print 'x does not equal 2 or 1';
 }
 ```
-**Switches**
-Switches are a good alternative to If/Else if/Else Statements in situations where you want to check multiple values against a single variable or condition.
+
+`Switches` are a good alternative to If/Else if/Else Statements in situations where you want to check multiple values against a single variable or condition.
 ```php
+// Switches
+
 $var = "yes";
 switch ($var) {
 case "maybe":
@@ -403,9 +354,9 @@ case "no":
 default:
     print 'none of the other two cases were true, so this sentence will be printed out instead.';
 }
-```
-Similar to the Break Statement is the Exit Statement. Exit is particularly useful in situations where you run into what would be considered a "fatal error" (for example, if the user had entered a password that was incorrect) or any other time you needed to end the execution of a script before it naturally terminated.
-```php
+
+// Similar to the `break` Statement is the `exit` Statement. `exit` is particularly useful in situations where you run into what would be considered a "fatal error" (for example, if the user had entered a password that was incorrect) or any other time you needed to end the execution of a script before it naturally terminated. Unlike `break`, `exit` may be used anywhere in your scripts, inside or outside of control structures.  
+
 $var = "yes";
 switch ($var) {
 case "yes":
@@ -417,8 +368,9 @@ case "no":
 }
 print "this will not be printed, because the script will have terminate before this line is reached";
 ```
-Unlike break, exit may be used anywhere in your scripts, inside or outside of control structures.  
-**The Ternary Operator ( ? : )**
+
+### The Ternary Operator ( ? : )
+
 ```php
 $x = 1;
 ($x==1) ? (print '$x is equal to 1') : (print '$x is not equal to 1');
@@ -426,399 +378,44 @@ $x = 1;
 ## Control Loops
 Loops in PHP are useful when you want to execute a piece of code repeatedly until a condition evaluates to false.  
 Code is executed repeatedly as long as a condition evaluates to true, and as soon as the condition evaluates to false, the script continues executing the code after the loop.
-**While Loops**
 ```php
+// while
 $x=1;
 while ($x <=10){
     print "$x<br>";
     $x++;
 }
-```
-```php
-$max = 0;
-echo $i = 0;
-echo ",";
-echo $j = 1;
-echo ",";
-$result = 0;
-while ($max < 10) {
-    $result = $i + $j;
-    $i = $j;
-    $j = $result;
-    $max = $max + 1;
-    echo $result;
-    echo ",";
-}
-```
-**Do…While Loops**  
-```php
+
+// do…while
 $x = 11;
 do {
     print $x . "<br>";
     $x++;
 } while ($x <= 10);
-```
-```php
-$i = 1;
-$sum = 0;
-do {
-    $sum = $sum + $i;
-    $i++;
-} while ($i <= 5);
-echo "The Sum of 1 to 5 = " . $sum;
-```
-```php
-$even = "";
-$odd = "";
-$i = 1;
-do {
-    if ($i % 2 == 0) {
-        $even = $even . " " . $i;
-    } else {
-        $odd = $odd . " " . $i;
-    }
-    $i++;
-} while ($i <= 20);
-echo "The Even no = " . $even . "<br/>";
-echo "The Odd no = " . $odd;
-// The output:
-// The Even no = 2 4 6 8 10 12 14 16 18 20
-// The Odd no = 1 3 5 7 9 11 13 15 17 19
-```
-**For Loops**
-```php
+
+// for
 for ($x = 1; $x <= 10; $x++) {
     print $x . "<br>";
 }
-```
-```php
-$d = 0;
-$e = 0;
-for ($i = 0; $i < 5; $i++) {
-    $d += 10;
-    $e += 5;
-}
-echo ("At the end of the loop d = $d and e = $e");
-```
-```php
-echo "List of the Natural Numbers between 1-30 :: ";
-$j = 0;
-for ($i = 1; $i <= 30; $i++) {
-    echo $i . " , ";
-    $j = $j + $i;
-}
-echo "<br>";
-echo "Sum of all the natural numbers between 1-30 :: ";
-echo $j;
-echo "<br>";
-```
-```php
-$brush_price = 5;
-echo "<table border=\"1\" align=\"center\">";
-echo "<tr><th>Quantity</th>";
-echo "<th>Price</th></tr>";
-for ($counter = 10; $counter <= 100; $counter += 10) {
-    echo "<tr><td>";
-    echo $counter;
-    echo "</td><td>";
-    echo $brush_price * $counter;
-    echo "</td></tr>";
-}
-echo "</table>";
-```
-**For Each Loop**  
-Syntax:
-```php
+
+// foreach
 foreach($array as $value)
 {
     // Statements to be executed
 }
 ```
-## Summary
+### Summary
 * The `for…` loop is used to execute a block of a specified number of times
 * The `foreach…` loop is used to loop through arrays
-* `While…` loop is used to execute a block of code as long as the set condition is made to be false
+* `while…` loop is used to execute a block of code as long as the set condition is made to be false
 * The `do… while` loop is used to execute the block of code at least once then the rest of the execution is dependent on the evaluation of the set condition
 
-# PHP Array
-Array is a data structure which allows you to store multiple elements in a single variable.
-```php
-$array_fruits = array('Apple', 'Orange', 'Watermelon', 'Mango');
-```
-```php
-$color1 = "Red";
-$color2 = "Green";
-$color3 = "Blue";
-```
-## Types of Arrays in PHP
-There are three kinds of arrays that you can make. These are listed below.
-1. Numeric arrays – Arrays with a numeric index
-2. Associative arrays – Arrays with named keys
-3. Multidimensional arrays – Arrays containing one or more arrays  
 
-## Initialization an Array
-```php
-$array = array();
-$array = [];
-```
 
-## Numeric Arrays
-The filled or indexed array is an array where all key values are numeric and always start from zero. You can define this array as below.
-```php
-//Define an indexed array
-$colors = array("Red", "Green", "Blue");
-$colors = array(0 => "Red", 1 => "Green", 2 => "Blue");
-```
-```php
-// create an array already initialized with values
-$array = [];
-$array[] = 'One';
-$array[] = 'Two';
-$array[] = 'Three';
-echo '<pre>';
-print_r($array);
-echo '</pre>';
-// Output: $array = ['One', 'Two', 'Three'];
-```
-## Array Elements
-```php
-$array = ['One', 'Two', 'Three'];
-// get the first element of the $array array
-echo $array[0];
-echo "<br>";
-// get the second element of the $array array
-echo $array[1];
-echo "<br>";
-// get the third element of the $array array
-echo $array[2];
-echo "<br>";
-```
-```php
-$empty_array = array();
-$my_array1 = array("apple", "banana", "mango", "peach");
-$my_array2[0] = "joe";
-$my_array2[1] = "Jonas";
-$my_array2[2] = "nick";
-echo $my_array1[0] . "<br>";
-echo $my_array2[0];
-```
-## Associative Arrays
-The keys are well defined with respect to the data that index holds as shown in the below example.
-```php
-$ages = array("Zaid" => 26, "Ali" => 30, "John" => 28, "Cris" => 28, "Clark" => 28);
-```
-```php
-$movie = array(
-    0 => "Shaolin Monk",
-    1 => "Drunken Master",
-    2 => "American Ninja",
-    3 => "Once upon a time in China",
-    4 => "Replacement Killers"
-);
-echo $movie[4];
-```
-```php
-$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");
-print_r($persons);
-echo "";
-echo "Mary is a " . $persons["Mary"];
-```
-```php
-// Associative array
-$person_weight = array(
-    "Rajnish" => 58,
-    "Sanjeev" => 55,
-    "Ravi" => 60,
-    "Yash" => 60,
-    "Suraj" => 48
-);
-// Use for-each loop and display the
-// key of associative array
-foreach ($person_weight as $key => $value) {
-    echo "Key: " . $key . "<br>";
-}
-```
-## Multidimensional Arrays
-In a multidimensional array, there are one or more arrays between the array. So, you can say the sub-array of the first array.
-```php
-$movies = array(
-    "comedy" => array("Pink Panther", "John English", "See no evil hear no evil"),
-    "action" => array("Die Hard", "Expendables"),
-    "epic" => array("The Lord of the rings"),
-    "Romance" => array("Romeo and Juliet")
-);
-print_r($movies);
-```
-```php
-//column Multi D Array
-$a[0][0] = "value0";
-$a[0][1] = "value1";
-$a[0][2] = "value2";
-$a[1][0] = "value3";
-$a[1][1] = "value4";
-$a[1][2] = "value5";
-$a[2][0] = "value6";
-$a[2][1] = "value7";
-$a[2][2] = "value8";
-
-//numeric array starts with (0)
-for ($b = 0; $b < count($a); $b++) {
-    for ($c = 0; $c < count($a[$b]); $c++) {
-        echo $a[$b][$c], "<br> ";
-    }
-}
-```
-```php
-//Row Multi D Array
-$name = array(
-    array("ajay", "kumar", 10),
-    array("vijay", "kumar", 20),
-    array("dhanjay", "kumar", 30)
-);
-for ($e = 0; $e < count($name); $e++) {
-    echo "--------------------------<br>";
-    for ($f = 0; $f < count($name[$e]); $f++) {
-        echo $name[$e][$f], "<br>";
-    }
-}
-```
-```php
-$d = array(
-"sunday" => array("cost", "first", 10),
-"monday" => array("cost1", "second", 20),
-"tuesday" => array("cost2", "third", 30)
-);
-foreach ($d as $e) {
-    foreach ($e as $f) {
-        echo $f, " ";
-    }
-    echo "<br>";
-}
-```
-```php
-$my_array1 = array("apple", "banana", "mango", "peach");
-echo $my_array1[0] . "<br>";
-echo $my_array1[2] . "<br>";
-echo $my_array1[3] . "<br>";
-echo $my_array1[4] . "<br>";
-for ($i = 0; $i < count($my_array1); $i++)
-echo $my_array1[$i] . "<br>";
-```
-```php
-
-    $users = ['john', 'dave', 'tim'];
-    for ($i = 0; $i < count($users); $i++)
-    echo $users[$i] . "<br>";
-?>
-```
-```php
-$users = ['john', 'dave', 'tim'];
-foreach ($users as $user)
-echo $user . "<br>";
-```
-## PHP Array Function
-**length of an array**  
-The length of an array, i.e, the number of elements present in the array can be counted using the in-built function `count()`.
-```php
-//Method 1 to create an array
-$my_array1 = array("apple", "banana", "mango", "peach");
-//calculating length of the array
-echo "Length of the array is: " . count($my_array1);
-```
-**array_keys()**  
-The array_keys() function is used to get all the keys or a subset of the keys of an array.
-```php
-
-$array1 = array("Orange" => 100, "Apple" => 200, "Banana" => 300, "Cherry" => 400);
-print_r(array_keys($array1));
-```
-**array_values()**  
-array_values — Return all the values of an array
-```php
-$array = array("size" => "XL", "color" => "gold");
-print_r(array_values($array));
-```
-```php
-$Flower = array('flower1' => null, 'flower2' => null, 'flower3' => null, 'flower4' => null);
-echo "Actual Array: ";
-print_r($Flower);
-//return values
-echo "Values: ";
-print_r(array_values($Flower));
-```
-**array_push()**  
-array_push — Push one or more elements onto the end of array
-```php
-$arr = ['apple', 'orange', 'mango'];
-array_push($arr, 'strawberry');
-print_r($arr);
-```
-**array_unshift()**  
-array_unshift — Prepend one or more elements to the beginning of an array
-```php
-$arr = ['apple', 'orange', 'mango'];
-array_unshift($arr, 'watermelon');
-print_r($arr);
-```
-**array_pop()**  
-array_pop — Pop the element off the end of array
-```php
-$arr = ['apple', 'orange', 'mango'];
-array_pop($arr);
-print_r($arr);
-```
-**array_shift()**  
-array_shift — Shift an element off the beginning of array
-```php
-$arr = ['apple', 'orange', 'mango'];
-array_shift($arr);
-print_r($arr);
-```
-**array_map()**   
-array_map — Applies the callback to the elements of the given arrays
-```php
-$fruits = ['apple', 'orange', 'mango'];
-$arrmap = array_map(function($f) {
-    return strtoupper($f);
-}, $fruits);
-print_r($arrmap);
-```
-**list()**  
-list — Assign variables as if they were an array
-```php
-$fruits = ['apple', 'orange', 'mango'];
-list($f1, $f2, $f3) = $fruits;
-echo $f1;
-echo $f2;
-echo $f3;
-```
-**array_walk()**  
-The `array_walk` is an array function provided by PHP which applies the given function to each element in the array, hence the name `array_walk`.
-```php
-$users = ['john', 'dave', 'tim'];
-function print_item($item, $key)
-{
-    echo $item . "<br>";
-}
-array_walk($users, 'print_item');
-```
-```php
-function myfunction($value, $key) {
-    $value = "yellow";
-}
-$a = array("a" => "red", "b" => "green", "c" => "blue");
-array_walk($a, "myfunction");
-print_r($a);
-```
-## Summary
-* Arrays in PHP are one of the most powerful and flexible mechanisms for storing and manipulating
-lists of data.
-* Arrays will be used often in the course of developing web applications using PHP.
-
-# PHP Function
+## PHP Function
 **Types of Functions**
-* Built-in Functions in PHP
 * User Defined Functions in PHP
+* Built-in Functions in PHP
 * Advantages of PHP Function
 * Creating and Calling Function
 * PHP Function Arguments
@@ -827,205 +424,14 @@ lists of data.
 * PHP Functions - Returning Value
 * Setting Default Values for Passing Arguments
 * Dynamic Function Calls  
-## Advantages of PHP Function
+### Advantages of PHP Function
 * Reusability of Code: Unlike other programming languages, PHP Functions are specified only once
 and can be called multiple times.
 * Less Code: It saves a lot of code because the logic doesn't have to be written several times. You can
 write the logic only once and reuse it by using functions.
 * Simple to Comprehend: The programming logic is separated using PHP Functions. Since every logic is
-divided into functions, it is easier to understand the application's flow.  
-## Built-in Functions in PHP 
-PHP has over 1000 built-in functions that can be called directly from within a script to perform a specific task
-in PHP Functions.  
-## PHP String Functions
-String functions are built-in language constructs and functions that are designed to manipulate and display
-strings. These functions include trimming whitespace, properly escaping strings for security, splitting strings,
-and many more.  
-## Array String Functions
-**explode()**  
-The explode function splits a string by a given delimiter and returns an array with all the substrings between
-the delimiters.  
-*Limit is unspecified* :
-```php
-$str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
-$exploded = explode(",", $str);
-print_r($exploded); //Print the array to the screen;
-```
-*Limit is positive* :
-```php
-$str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
-$exploded = explode(",", $str, 5);
-print_r($exploded); //Print the array to the screen;
-```
-**implode()**  
-The implode function does the exact opposite of the explode function. It converts an array into a string, with each array element separated by a delimiter.
-```php
-$column_heading = ['first_name', 'age', 'phone number', 'address'];
-$sample_header = implode('; ', $column_heading);
-echo $sample_header;
-```
-```php
-$trial = array('This', 'is', 'PHP', 'simplified');
-echo implode("|", $trial);
-echo implode("*", $trial);
-echo implode("+", $trial);
-echo implode("_", $trial);
-```
-```php
-$details = [
-    'company_name' => 'Frank',
-    'domain' => 'Smith',
-    'Male'
-];
-echo implode(',', $details);
-```
-**str_split()**    
-The `str_split` function takes a string to turn into an array, and splits the string into an array, with each of the characters being a separate character.
-*No length specified* :
-```php
-$to_split = "Hello, World!";
-print_r(str_split($to_split));
-```
-*Length specified* :
-```php
-$string = "hello world how are you";
-print_r(str_split($string, 10));
-```
-**Adding and Removing Special Characters**  
-**trim()**  
-The `trim()` function removes whitespace characters from the beginning and end of a string on default settings, but can also remove other characters if specified
-```php
-$string = "Hay Thar! ";
-echo trim($string);
-```
-```php
-$string = "Hay Thar!";
-$trimmed = trim($string, "HoWdy!");
-echo $trimmed;
-```
-**rtrim()** and **ltrim()**   
-These are the same as trim, except they only do it from one end. rtrim trims from the end, and ltrim trims from the beginning.
-```php
-$string = " website";
-echo "Welcome to the " . ltrim($string);
-```
-**addslashes()**  
-This function takes one input string and returns a string with all of the quotation marks escaped by a slash.
-```php
-$string = "I am about to land at O'Hare airport in Chicago, Illinois";
-echo addslashes($string);
-```
-**stripslashes()**
-```php
-$string = "I am about to land at O\'Hare airport in Chicago, Illinois";
-echo stripslashes($string);
-```
-**strip_tags()**  
-`strip_tags()` is another security feature, to prevent people from entering HTML tags into forms. This is useful because otherwise, people could enter new forms, and submit them, as well as Javascript, and Iframes containing malicious code.
-```php
-$text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
-echo strip_tags($text);
-echo "<br>";
-echo strip_tags($text, '<p><a>');
-```
-## Manipulating Substrings
-**substr()**  
-`substr()` takes a string and a location to start in that string, and returns the substring starting at the location specified going to the end of the string  
-*no length specified* :
-```php
-$string = "hello, world!";
-echo $string . "<br>";
-$substring = substr($string, 4);
-echo $substring;
-```
-*length specified* :
-```php
-$string = "hello, world!";
-echo $string . "<br>";
-$substring = substr($string, 4, 4);
-echo $substring;
-```
-**strpos()**  
-`strpos()` finds the location of a substring in a string.  
-*Optional parameter offset not specified*:
-```php
-$haystack = "Welcome PHP";
-echo $haystack . "<br>";
-$location = strpos($haystack, "c");
-echo "The character c is found at character $location in $haystack";
-```
-*Optional parameter offset specified* :
-```php
-$haystack = "Welcome PHP";
-echo $haystack . "<br>";
-$location = strpos($haystack, "e", 5);
-echo "The character e is found at character $location in $haystack";
-```
-**stripos()**
-`stripos()` does the same thing as strpos, except that it is case-insensitive. The syntax and parameters are exactly the same as strops.
-```php
-$haystack = "hello, world!";
-echo $haystack . "<br>";
-$location = stripos($haystack, "L");
-echo "The character L is found at character $location in $haystack";
-```
-**strstr()**  
-`strstr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for  
-```php
-$haystack = "foo@bar.com";
-echo $haystack . "<br>";
-$domain = strstr($haystack, "@");
-echo $domain;
-```
-```php
-$haystack = "foo@bar.com";
-echo $haystack . "<br>";
-$username = substr($haystack, 0, strpos($haystack, "@"));
-echo $username;
-```
-**stristr() (case insensitive strstr)**  
-`stristr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for
-```php
-$haystack = "FoO@bAr.cOm";
-$needle = "@Ba";
-$substring = stristr($haystack, $needle);
-echo "$haystack <br> $substring";
-```
-**str_replace()**  
-`str_replace()` replaces certain substrings in a string with other substrings.  
-*No Limit Specified*:
-```php
-$string = "hello. My name is bob. This is my friend bob.";
-$find = "bob";
-$replace = "joe";
-$result = str_replace($find, $replace, $string);
-echo $string . "<br>" . $result;
-```
-*Search value is an array* :
-```php
-$string = "hello. My name is bob. This is my friend bob.";
-$find = array("bob", "friend");
-$replace = "joe";
-$result = str_replace($find, $replace, $string);
-echo $string . "<br>" . $result;
-```
-*Both values are array* :
-```php
-$strings = array("hello. My name is bob. This is my friend bob.", "Hello. My name is bill. This is my friend jill");
-$find = array("bob", "friend", "bill", "jill");
-$replace = array("joe", "worst enemy", "will", "jane");
-$result = str_replace($find, $replace, $string);
-print_r($result); //Echo $result to the screen
-```
-**str_ireplace()**  
-`str_ireplace()` is a case-insensitive version of str_replace
-```php
-$string = "Hi! My name is Bob.";
-$find = "bob"; //Notice that the b is lowercase here, but uppercase here
-$replace = "Joe";
-$result = str_ireplace($find, $replace, $string);
-echo "$string <br> $result";
-```
+divided into functions, it is easier to understand the application's flow.
+
 ## User Defined Functions in PHP
 * In PHP, functions can be written on their own in addition to the built-in PHP functions.
 * A function is a set of statements that can be used repeatedly in a program.
@@ -1065,7 +471,7 @@ customFont("Times", 3);
 customFont("Courier");
 ?>
 ```
-## Returning Values from a Function
+**Returning Values from a Function**
 ```php
 function getSum($num1, $num2) {
     $total = $num1 + $num2;
@@ -1199,6 +605,426 @@ function display($number) {
 }
 display(1);
 ```
+ 
+### Built-in Functions in PHP 
+PHP has over 1000 built-in functions that can be called directly from within a script to perform a specific task
+in PHP Functions.  
+
+### PHP String Functions
+String functions are built-in language constructs and functions that are designed to manipulate and display
+strings. These functions include trimming whitespace, properly escaping strings for security, splitting strings, and many more.  
+`explode()`
+The `explode` function splits a string by a given delimiter and returns an array with all the substrings between
+the delimiters.  
+*Limit is unspecified* :
+```php
+$str = "Toyota,BMW,Honda,Mercedes,Bugatti,Lamborghini,Acura,Porsche";
+
+$exploded = explode(",", $str);
+print_r($exploded);
+// Array ( [0] => Toyota [1] => BMW [2] => Honda [3] => Mercedes [4] => Bugatti [5] => Lamborghini [6] => Acura [7] => Porsche ) 
+
+$exploded = explode(",", $str, 5);
+print_r($exploded);
+// Array ( [0] => Toyota [1] => BMW [2] => Honda [3] => Mercedes [4] => Bugatti,Lamborghini,Acura,Porsche ) 
+```
+`implode() `
+The `implode` function does the exact opposite of the explode function. It converts an array into a string, with each array element separated by a delimiter.
+```php
+$column_heading = ['first_name', 'age', 'phone number', 'address'];
+$sample_header = implode('; ', $column_heading);
+echo $sample_header;
+// first_name; age; phone number; address
+
+$trial = array('This', 'is', 'PHP', 'simplified');
+echo implode("|", $trial); // This|is|PHP|simplified
+echo implode("*", $trial); // This*is*PHP*simplified
+echo implode("+", $trial); // This+is+PHP+simplified
+echo implode("_", $trial); // This_is_PHP_simplified
+```
+`str_split()`
+The `str_split` function takes a string to turn into an array, and splits the string into an array, with each of the characters being a separate character.
+*No length specified* :
+```php
+$to_split = "Hello, World!";
+print_r(str_split($to_split)); 
+//Array ( [0] => H [1] => e [2] => l [3] => l [4] => o [5] => , [6] => [7] => W [8] => o [9] => r [10] => l [11] => d [12] => ! ) 
+```
+```php
+$string = "hello world how are you";
+print_r(str_split($string, 10));
+// Array ( [0] => hello worl [1] => d how are [2] => you ) 
+```
+`trim()`
+The `trim()` function removes whitespace characters from the beginning and end of a string on default settings, but can also remove other characters if specified
+```php
+$string = "Hello PHP! ";
+echo trim($string);
+```
+`rtrim()` & `ltrim()`
+These are the same as trim, except they only do it from one end. rtrim trims from the end, and ltrim trims from the beginning.
+```php
+$string1 = "Welcome     ";
+$string2 = " website";
+echo rtrim($string1) . " to the " . ltrim($string2);
+// Welcome to the website
+```
+`addslashes()` 
+This function takes one input string and returns a string with all of the quotation marks escaped by a slash.
+```php
+$string = "I am about to land at O'Hare airport in Chicago, Illinois";
+echo addslashes($string);
+// I am about to land at O\'Hare airport in Chicago, Illinois
+```
+`stripslashes()`
+```php
+$string = "I am about to land at O\'Hare airport in Chicago, Illinois";
+echo stripslashes($string);
+// I am about to land at O'Hare airport in Chicago, Illinois
+```
+`strip_tags()`  
+`strip_tags()` is another security feature, to prevent people from entering HTML tags into forms. This is useful because otherwise, people could enter new forms, and submit them, as well as Javascript, and Iframes containing malicious code.
+```php
+$text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
+
+echo strip_tags($text);
+// Test paragraph. Other text
+
+echo strip_tags($text, '<p>');
+// Test paragraph.
+// Other text
+```
+`substr()`
+`substr()` takes a string and a location to start in that string, and returns the substring starting at the location specified going to the end of the string  
+*no length specified* :
+```php
+$string = "hello, world!";
+echo $string; // hello, world!
+
+$substring = substr($string, 4);
+echo $substring; // o, world!
+
+$string = "hello, world!";
+$substring = substr($string, 4, 4);
+echo $substring; // o, w
+```
+`strpos()`
+`strpos()` finds the location of a substring in a string.  
+*Optional parameter offset not specified*:
+```php
+$haystack = "Welcome PHP";
+$location = strpos($haystack, "c");
+echo "The character c is found at character $location in $haystack";
+// The character c is found at character 3 in Welcome PHP
+```
+`stripos()`
+`stripos()` does the same thing as strpos, except that it is case-insensitive. The syntax and parameters are exactly the same as strops.
+```php
+$haystack = "hello, world!";
+echo $haystack; // hello, world!"
+$location = stripos($haystack, "L");
+echo "The character L is found at character $location in $haystack";
+// The character L is found at character 2 in hello, world!
+```
+`strstr()` 
+`strstr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for  
+```php
+$haystack = "foo@bar.com";
+$domain = strstr($haystack, "@");
+echo $domain; // @bar.com
+```
+`stristr()` (case insensitive strstr)
+`stristr()` takes a string to look in, a string to look for, and returns all of the characters before or after the string you want to look for
+```php
+$haystack = "FoO@bAr.cOm";
+$needle = "@Ba";
+$substring = stristr($haystack, $needle);
+echo $substring; // @bAr.cOm
+```
+`str_replace()`  
+`str_replace()` replaces certain substrings in a string with other substrings.  
+```php
+$string = "hello. My name is bob. This is my friend bob.";
+$find = "bob";
+$replace = "joe";
+$result = str_replace($find, $replace, $string);
+echo $string . "<br>" . $result;
+// hello. My name is bob. This is my friend bob.
+// hello. My name is joe. This is my friend joe.
+```
+```php
+// *Search value is an array* :
+$string = "hello. My name is bob. This is my friend bob.";
+$find = array("bob", "friend");
+$replace = "joe";
+$result = str_replace($find, $replace, $string);
+echo $string . "<br>" . $result;
+// hello. My name is bob. This is my friend bob.
+// hello. My name is joe. This is my joe joe.
+```
+`str_ireplace()`
+`str_ireplace()` is a case-insensitive version of str_replace
+```php
+$string = "Hi! My name is Bob.";
+$find = "bob";
+$replace = "Joe";
+$result = str_ireplace($find, $replace, $string);
+echo "$string <br> $result";
+// Hi! My name is Bob.
+// Hi! My name is Joe.
+```
+
+## PHP Array
+Array is a data structure which allows you to store multiple elements in a single variable.
+```php
+// Initialization an Array
+$array = array();
+$array = [];
+
+$array_fruits = array('Apple', 'Orange', 'Watermelon', 'Mango');
+$colors = ['red', 'green', 'blue', 'violet'];
+```
+
+### Types of Arrays in PHP
+There are three kinds of arrays that you can make. These are listed below.
+```php
+// Define an indexed array
+$colors = array("Red", "Green", "Blue"); 
+// Output: Array ( [0] => Red [1] => Green [2] => Blue ) 
+```
+```php
+// create an array already initialized with values
+$array = [];
+$array[] = 'One';
+$array[] = 'Two';
+$array[] = 'Three';
+print_r($array); 
+// Output: Array ( [0] => One [1] => Two [2] => Three )
+```
+
+#### Numeric arrays – Arrays with a numeric index
+The filled or indexed array is an array where all key values are numeric and always start from zero. You can define this array as below.
+```php
+// Numeric array
+$fruit = array("apple", "banana", "mango");
+
+// get the first element of the $fruit array
+echo $fruit[0]; // apple
+
+// get the second element of the $fruit array
+echo $fruit[1]; // banana
+
+// get the third element of the $fruit array
+echo $fruit[2]; // mango
+
+```
+
+#### Associative arrays – Arrays with named keys
+The keys are well defined with respect to the data that index holds as shown in the below example.
+```php
+$ages = array("Zaid" => 26, "Ali" => 30, "John" => 28, "Cris" => 28, "Clark" => 28);
+print_r($ages);
+```
+```php
+$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");
+print_r($persons);
+echo "Mary is a " . $persons["Mary"];
+```
+```php
+$person_weight = array(
+    "Rajnish" => 58,
+    "Sanjeev" => 55,
+    "Ravi" => 60,
+    "Yash" => 60,
+    "Suraj" => 48
+);
+// Use for-each loop and display the key of associative array
+foreach ($person_weight as $key => $value) {
+    echo "Key: " . $key . "<br>";
+}
+```
+
+#### Multidimensional arrays – Arrays containing one or more arrays  
+In a multidimensional array, there are one or more arrays between the array. So, you can say the sub-array of the first array.
+```php
+$movies = array(
+    "comedy" => array("Pink Panther", "John English", "See no evil hear no evil"),
+    "action" => array("Die Hard", "Expendables"),
+    "epic" => array("The Lord of the rings"),
+    "Romance" => array("Romeo and Juliet")
+);
+print_r($movies);
+```
+```php
+$a[0][0] = "value0";
+$a[0][1] = "value1";
+$a[0][2] = "value2";
+$a[1][0] = "value3";
+$a[1][1] = "value4";
+$a[1][2] = "value5";
+$a[2][0] = "value6";
+$a[2][1] = "value7";
+$a[2][2] = "value8";
+
+for ($b = 0; $b < count($a); $b++) {
+    for ($c = 0; $c < count($a[$b]); $c++) {
+        echo $a[$b][$c], "<br> ";
+    }
+}
+// output:
+// value0
+// value1
+// value2
+// value3
+// value4
+// value5
+// value6
+// value7
+// value8
+```
+```php
+$name = array(
+    array("ajay", "kumar", 10),
+    array("vijay", "kumar", 20),
+    array("dhanjay", "kumar", 30)
+);
+for ($e = 0; $e < count($name); $e++) {
+    echo "--------------------------<br>";
+    for ($f = 0; $f < count($name[$e]); $f++) {
+        echo $name[$e][$f], "<br>";
+    }
+}
+// Output
+// --------------------------
+// ajay
+// kumar
+// 10
+// --------------------------
+// vijay
+// kumar
+// 20
+// --------------------------
+// dhanjay
+// kumar
+// 30
+```
+```php
+$d = array(
+"sunday" => array("cost", "first", 10),
+"monday" => array("cost1", "second", 20),
+"tuesday" => array("cost2", "third", 30)
+);
+foreach ($d as $e) {
+    foreach ($e as $f) {
+        echo $f, " ";
+    }
+    echo "<br>";
+}
+```
+```php
+$users = ['john', 'dave', 'tim'];
+
+// for loop
+for ($i = 0; $i < count($users); $i++)
+echo $users[$i] . "<br>";
+
+// foreach loop
+foreach ($users as $user)
+echo $user . "<br>";
+```
+
+## PHP Array Function
+`count()`
+The length of an array can be counted using the in-built function `count()`.
+```php
+$my_array1 = array("apple", "banana", "mango", "peach");
+echo "Length of the array is: " . count($my_array1);
+// Length of the array is: 4
+```
+`array_keys()`
+The `array_keys()` function is used to get all the keys or a subset of the keys of an array.
+```php
+$array1 = array("Orange" => 100, "Apple" => 200, "Banana" => 300, "Cherry" => 400);
+print_r(array_keys($array1));
+// Array ( [0] => Orange [1] => Apple [2] => Banana [3] => Cherry ) 
+```
+`array_values() `
+Return all the values of an array
+```php
+$array = array("size" => "XL", "color" => "gold");
+print_r(array_values($array));
+// Array ( [0] => XL [1] => gold ) 
+```
+`array_push()`
+Push one or more elements onto the end of array
+```php
+$arr = ['apple', 'orange', 'mango'];
+array_push($arr, 'strawberry');
+print_r($arr);
+// Array ( [0] => apple [1] => orange [2] => mango [3] => strawberry ) 
+```
+`array_unshift()` 
+Prepend one or more elements to the beginning of an array
+```php
+$arr = ['apple', 'orange', 'mango'];
+array_unshift($arr, 'watermelon');
+print_r($arr);
+// Array ( [0] => watermelon [1] => apple [2] => orange [3] => mango ) 
+```
+`array_pop()`
+Pop the element off the end of array
+```php
+$arr = ['apple', 'orange', 'mango'];
+array_pop($arr);
+print_r($arr);
+// Array ( [0] => apple [1] => orange ) 
+```
+`array_shift()`
+Shift an element off the beginning of array
+```php
+$arr = ['apple', 'orange', 'mango'];
+array_shift($arr);
+print_r($arr);
+// Array ( [0] => orange [1] => mango ) 
+```
+`array_map()`
+Applies the callback to the elements of the given arrays
+```php
+$fruits = ['apple', 'orange', 'mango'];
+$arrmap = array_map(function($f) {
+    return strtoupper($f);
+}, $fruits);
+print_r($arrmap);
+// Array ( [0] => APPLE [1] => ORANGE [2] => MANGO ) 
+```
+`list()`  
+list — Assign variables as if they were an array
+```php
+$fruits = ['apple', 'orange', 'mango'];
+list($f1, $f2, $f3) = $fruits;
+echo $f1; // apple
+echo $f2; // orange
+echo $f3; // mango
+```
+`array_walk()`
+The `array_walk` is an array function provided by PHP which applies the given function to each element in the array, hence the name `array_walk`.
+```php
+$users = ['john', 'dave', 'tim'];
+function print_item($item, $key)
+{
+    echo "Hi, I am $item. <br>";
+}
+array_walk($users, 'print_item');
+// Hi, I am john.
+// Hi, I am dave.
+// Hi, I am tim. 
+```
+### Summary
+* Arrays in PHP are one of the most powerful and flexible mechanisms for storing and manipulating
+lists of data.
+* Arrays will be used often in the course of developing web applications using PHP.
+
+
 **filter_var ()**  
 `filter_var()` is a PHP function used to filters a variable with the help of a specified filter. we can use `filter_var()` function to validate and sanitize a data such as email id, IP address etc.
 1. Sanitize and Validate an Email Address
