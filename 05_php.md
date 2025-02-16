@@ -1315,8 +1315,8 @@ add properties to class :
 
 class People
 {
-    public name;
-    public age;
+    public $name;
+    public $age;
 }
 ```
 
